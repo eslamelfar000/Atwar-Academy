@@ -1,31 +1,8 @@
 {
   "rewrites": [
     {
-      "source": "/",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/components/(.*)",
-      "destination": "/components/$1"
-    },
-    {
-      "source": "/pages/(.*)",
-      "destination": "/pages/$1"
-    },
-    {
-      "source": "/pages/SuccessPages/(.*)",
-      "destination": "/pages/SuccessPages/$1"
-    }
-  ],
-  "headers": [
-    {
-      "source": "/(.*\\.(css|js|png|jpg|jpeg|gif|svg|ico|woff|woff2|ttf|eot))",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=31536000, immutable"
-        }
-      ]
+      "source": "/(.*)",
+      "destination": "/$1"
     }
   ]
 }
