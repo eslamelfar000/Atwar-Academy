@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../icons/fontawesome-free-7.2.0-web/fontawesome-free-7.2.0-web/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Atwar - Training Plan</title>
+</head>
+
+<body>
+
+    <!-- page actions [ breadcrumb, search , per page selection ] -->
+    <section class="page-actions relative  py-6 pt-16 bg-white">
+        <div class="max-w-7xl mx-auto px-8 sm:px-6 z-10 space-y-6">
+            <!-- breadcrumb -->
+            <div class="breadcrumb">
+                <ul class="flex items-center gap-2">
+                    <li>
+                        <a href="#" class="text-[var(--color-primary)] text-lg">
+                            <i class="fa-regular fa-house"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-chevron-left text-xs text-[var(--color-primary)]"></i>
+                    </li>
+                    <li>
+                        <p class="">الخطة التدريبية</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="actions flex items-center justify-between gap-10">
+                <!-- search -->
+                <div class="search">
+                    <div class="search-box relative">
+                        <input type="text" placeholder="ابحث"
+                            class="w-full h-full border border-gray-300 p-2 text-md pr-12 focus:outline-none focus:border-[var(--color-primary)]">
+                        <i
+                            class="fa-solid fa-magnifying-glass absolute top-1/2 right-4 -translate-y-1/2 opacity-50"></i>
+                    </div>
+                </div>
+
+                <!-- per page selection -->
+                <div class="per-page-selection flex items-center gap-4">
+                    <div class="per-page-label">
+                        <p class="text-sm sm:text-md text-gray-500">عرض</p>
+                    </div>
+                    <div class="per-page-box relative">
+                        <select name="" id=""
+                            class="w-full h-full border border-gray-300 p-2 px-4 text-md focus:outline-none focus:border-[var(--color-primary)]">
+                            <option value="">10</option>
+                            <option value="">20</option>
+                            <option value="">30</option>
+                        </select>
+                    </div>
+                    <div class="per-page-icon">
+                        <p class="text-sm sm:text-md text-gray-500">سجلات</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- table of data -->
+    <section class="table-of-data relative py-6 bg-white min-h-[calc(100vh-200px)]">
+        <div class="max-w-7xl mx-auto px-8 sm:px-6 z-10">
+            <div class="table-box">
+                <div class="table-content overflow-x-auto ">
+                    <table class="w-full text-right min-w-[1400px] lg:min-w-[1200px]">
+                        <thead class="">
+                            <tr class="text-gray-700 border-b border-gray-300">
+                                <th class="py-2 px-4">#</th>
+                                <th class="py-2 px-4">اسم البرنامج</th>
+                                <th class="py-2 px-4">اعتماد المؤسسة العامة للتدريب التقني والمهني</th>
+                                <th class="py-2 px-4">عدد الايام</th>
+                                <th class="py-2 px-4">عدد الساعات </th>
+                                <th class="py-2 px-4">نوع  التدريب </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="bg-[var(--color-forth)]/80">
+                                <td class="p-2 px-4">01</td>
+                                <td class="py-2 px-4"><span class="text-sm">دبلوم إدارة الموارد البشرية </span></td>
+                                <td class="py-2 px-4">
+                                    <span class="text-green-400 text-2xl">92719</span>
+                                </td>
+                                <td class="py-2 px-4">
+                                    <span class="text-red-500 text-lg">سنتين ونصف</span>
+                                </td>
+                                <td class="py-2 px-4">
+                                    <span class="text-sm">80 ساعة</span>
+                                </td>
+                                <td class="py-2 px-4">
+                                    <span class="text-sm">حضوري – الكتروني</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 px-4">02</td>
+                                <td class="py-2 px-4"><span class="text-sm">دبلوم الحاسب وتقنية المعلومات تخصص  شبكات الحاسب</span></td>
+                                <td class="py-2 px-4">
+                                    <span class="text-green-400 text-2xl">115489</span>
+                                </td>
+                                <td class="py-2 px-4">
+                                    <span class="text-red-500 text-lg">ثلاث سنوات</span>
+                                </td>
+                                <td class="py-2 px-4">
+                                    <span class="text-sm">140 ساعة</span>
+                                </td>
+                                <td class="py-2 px-4">
+                                    <span class="text-sm">حضور - عن بعد</span>
+                                </td>
+                            </tr>
+                            <tr class="bg-[var(--color-forth)]/80">
+                                <td class="py-2 px-4">03</td>
+                                <td class="py-2 px-4"><span class="text-sm">دبلوم الحاسب وتقنية المعلومات تخصص  شبكات الحاسب</span></td>
+                                <td class="py-2 px-4">
+                                    <span class="text-green-400 text-2xl">115489</span>
+                                </td>
+                                <td class="py-2 px-4">
+                                    <span class="text-red-500 text-lg">ثلاث سنوات</span>
+                                </td>
+                                <td class="py-2 px-4">
+                                    <span class="text-sm">140 ساعة</span>
+                                </td>
+                                <td class="py-2 px-4">
+                                    <span class="text-sm">حضور - عن بعد</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 px-4">04</td>
+                                <td class="py-2 px-4"><span class="text-sm">دبلوم الحاسب وتقنية المعلومات تخصص  شبكات الحاسب</span></td>
+                                <td class="py-2 px-4">
+                                    <span class="text-green-400 text-2xl">115489</span>
+                                </td>
+                                <td class="py-2 px-4">
+                                    <span class="text-red-500 text-lg">ثلاث سنوات</span>
+                                </td>
+                                <td class="py-2 px-4">
+                                    <span class="text-sm">140 ساعة</span>
+                                </td>
+                                <td class="py-2 px-4">
+                                    <span class="text-sm">حضور - عن بعد</span>
+                                </td>
+                            </tr>
+                            <tr class="bg-[var(--color-forth)]/80">
+                                <td class="py-2 px-4">05</td>
+                                <td class="py-2 px-4"><span class="text-sm">دبلوم الحاسب وتقنية المعلومات تخصص  شبكات الحاسب</span></td>
+                                <td class="py-2 px-4">
+                                    <span class="text-green-400 text-2xl">115489</span>
+                                </td>
+                                <td class="py-2 px-4">
+                                    <span class="text-red-500 text-lg">ثلاث سنوات</span>
+                                </td>
+                                <td class="py-2 px-4">
+                                    <span class="text-sm">140 ساعة</span>
+                                </td>
+                                <td class="py-2 px-4">
+                                    <span class="text-sm">حضور - عن بعد</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 px-4">06</td>
+                                <td class="py-2 px-4"><span class="text-sm">دبلوم الحاسب وتقنية المعلومات تخصص  شبكات الحاسب</span></td>
+                                <td class="py-2 px-4">
+                                    <span class="text-green-400 text-2xl">115489</span>
+                                </td>
+                                <td class="py-2 px-4">
+                                    <span class="text-red-500 text-lg">ثلاث سنوات</span>
+                                </td>
+                                <td class="py-2 px-4">
+                                    <span class="text-sm">140 ساعة</span>
+                                </td>
+                                <td class="py-2 px-4">
+                                    <span class="text-sm">حضور - عن بعد</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

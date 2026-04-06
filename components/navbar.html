@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../icons/fontawesome-free-7.2.0-web/fontawesome-free-7.2.0-web/css/all.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <nav class="w-full">
+        <div class="max-w-7xl xl:container mx-auto w-full flex items-center justify-between p-4 gap-4">
+            <div class="logo">
+                <a href="">
+                    <img src="../images/nav-logo.svg" alt="" class="w-full h-24 object-contain" />
+                </a>
+            </div>
+
+            <div class="nav-links items-center gap-5 hidden xl:flex">
+                <div class="nav-link hover:text-[var(--color-primary)] transition-all duration-300">
+                    <a href="" class="text-md 2xl:text-lg font-medium">الرئيسية</a>
+                </div>
+                <div class="nav-link hover:text-[var(--color-primary)] transition-all duration-300">
+                    <a href="" class="text-md 2xl:text-lg font-medium">المتجر الإلكتروني</a>
+                </div>
+                <div class="nav-link hover:text-[var(--color-primary)] transition-all duration-300">
+                    <a href="" class="text-md xl:text-lg font-medium">من نحن</a>
+                </div>
+                <div class="nav-link hover:text-[var(--color-primary)] transition-all duration-300">
+                    <a href="" class="text-md 2xl:text-lg font-medium">المحتوي المفتوح</a>
+                </div>
+                <div class="nav-link hover:text-[var(--color-primary)] transition-all duration-300">
+                    <a href="" class="text-md 2xl:text-lg font-medium">الخطة التدريبية</a>
+                </div>
+            </div>
+
+            <!-- Mobile Search Field (fixed floating) -->
+            <div id="mobileSearchField" class="hidden fixed top-[100px] left-0 right-0 z-40 px-4">
+                <div
+                    class="flex items-center border border-[var(--color-primary)] rounded-xl bg-white shadow-lg w-full max-w-lg mx-auto">
+                    <input type="text" placeholder="البحث في الدورات"
+                        class="flex-1 h-12 outline-none p-3 text-sm rounded-r-xl" />
+                    <button id="closeMobileSearch"
+                        class="p-3 text-gray-500 hover:text-[var(--color-primary)] cursor-pointer">
+                        <i class="fa-solid fa-xmark text-xl"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div
+                class="search hidden sm:flex items-center border border-[var(--color-primary)] rounded-xl w-1/2 xl:w-auto">
+                <div
+                    class="search-icon bg-[var(--color-primary)] text-white p-2 px-3 rounded-lg cursor-pointer -m-[1px]">
+                    <img src="../images/search-icon.png" alt="" class="w-8 h-8" />
+                </div>
+                <div class="search-input">
+                    <input type="text" placeholder="البحث في الدورات" class="h-10 outline-none p-2 text-sm" />
+                </div>
+            </div>
+
+            <!-- Mobile Search Icon (FontAwesome for color control) -->
+            <div class="flex items-center gap-2">
+                <div class="auth hidden lg:flex gap-2">
+                    <a href="/register.html"
+                        class="bg-transparent border border-[var(--color-primary)] text-[var(--color-primary)] hover:text-white hover:bg-[var(--color-primary)] transition-all duration-300 p-2 px-3 rounded-xl cursor-pointer">
+                        إنشاء حسابك
+                    </a>
+                    <a href="/login.html"
+                        class="bg-[var(--color-secondary)] text-white hover:bg-[var(--color-primary)] transition-all duration-300 p-2 px-3 rounded-xl cursor-pointer">
+                        تسجيل دخول
+                    </a>
+                </div>
+                <button id="mobileSearchBtn"
+                    class="sm:hidden text-[var(--color-primary)] cursor-pointer hover:opacity-80 transition-opacity">
+                    <div
+                        class="search-icon bg-[var(--color-primary)] text-white p-2 px-3 rounded-lg cursor-pointer -m-[1px]">
+                        <img src="../images/search-icon.png" alt="" class="w-6 h-6" />
+                    </div>
+                </button>
+
+                <div class="mobile-menu xl:hidden">
+                    <button id="menuBtn" class="text-[var(--color-primary)] cursor-pointer">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Side Sheet -->
+    <div id="mobileDrawer" class="fixed inset-0 z-50 hidden">
+        <!-- Backdrop -->
+        <div id="drawerBackdrop" class="absolute inset-0 bg-black/50 transition-opacity opacity-0"></div>
+
+        <!-- Drawer Content - slides from right for RTL -->
+        <div id="drawerContent"
+            class="absolute right-0 top-0 h-full w-[80%] bg-white shadow-xl transform translate-x-full transition-transform duration-300 flex flex-col">
+            <!-- Header -->
+            <div class="flex items-end justify-center p-4 pb-4 pt-16 text-white bg-[var(--color-primary)]">
+                <button id="closeBtn"
+                    class="p-2 absolute top-2 left-2 text-white hover:text-[var(--color-secondary)] cursor-pointer">
+                    <i class="fa-solid fa-xmark text-xl"></i>
+                </button>
+
+                <div class="user flex items-center gap-2">
+                    <i class="fa-regular fa-circle-user text-2xl"></i> <span>مرحبا بك</span>
+                </div>
+            </div>
+
+            <!-- Navigation Links -->
+            <div class="flex flex-col items-center p-4 py-6 gap-3">
+                <a href="" class="text-gray-700 text-lg hover:text-[var(--color-primary)] transition-colors py-2 ">الرئيسية</a>
+                <a href="" class="text-gray-700 text-lg hover:text-[var(--color-primary)] transition-colors py-2">المتجر
+                    الإلكتروني</a>
+                <a href="" class="text-gray-700 text-lg hover:text-[var(--color-primary)] transition-colors py-2">من
+                    نحن</a>
+                <a href="" class="text-gray-700 text-lg hover:text-[var(--color-primary)] transition-colors py-2">المحتوي
+                    المفتوح</a>
+                <a href="" class="text-gray-700 text-lg hover:text-[var(--color-primary)] transition-colors py-2">الخطة
+                    التدريبية</a>
+            </div>
+
+            <!-- Auth Buttons -->
+            <div class="p-4 flex flex-col gap-2">
+                <a href="/login"
+                    class="w-full text-center bg-[var(--color-forth)] text-[var(--color-primary)] hover:text-white py-3 rounded-sm hover:bg-[var(--color-primary)] transition-all duration-300 cursor-pointer">
+                    تسجيل دخول
+                </a>
+                <a href="/register"
+                    class="w-full text-center border border-[var(--color-primary)] text-[var(--color-primary)] py-3 rounded-sm hover:bg-[var(--color-primary)] hover:text-white transition-all duration-300 cursor-pointer">
+                    إنشاء حسابك
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const menuBtn = document.getElementById("menuBtn");
+        const closeBtn = document.getElementById("closeBtn");
+        const mobileDrawer = document.getElementById("mobileDrawer");
+        const drawerBackdrop = document.getElementById("drawerBackdrop");
+        const drawerContent = document.getElementById("drawerContent");
+
+        function openDrawer() {
+            mobileDrawer.classList.remove("hidden");
+            setTimeout(() => {
+                drawerBackdrop.classList.remove("opacity-0");
+                drawerContent.classList.remove("translate-x-full");
+            }, 10);
+        }
+
+        function closeDrawer() {
+            drawerBackdrop.classList.add("opacity-0");
+            drawerContent.classList.add("translate-x-full");
+            setTimeout(() => {
+                mobileDrawer.classList.add("hidden");
+            }, 300);
+        }
+
+        menuBtn.addEventListener("click", openDrawer);
+        closeBtn.addEventListener("click", closeDrawer);
+        drawerBackdrop.addEventListener("click", closeDrawer);
+
+        // Mobile Search Toggle
+        const mobileSearchBtn = document.getElementById("mobileSearchBtn");
+        const mobileSearchField = document.getElementById("mobileSearchField");
+        const closeMobileSearch = document.getElementById("closeMobileSearch");
+
+        mobileSearchBtn.addEventListener("click", () => {
+            mobileSearchField.classList.remove("hidden");
+            mobileSearchField.querySelector("input").focus();
+        });
+
+        closeMobileSearch.addEventListener("click", () => {
+            mobileSearchField.classList.add("hidden");
+        });
+    </script>
+</body>
+
+</html>

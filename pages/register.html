@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../icons/fontawesome-free-7.2.0-web/fontawesome-free-7.2.0-web/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Atwar - Register</title>
+</head>
+
+<body>
+    <div class="cover bg-[var(--color-primary)] min-h-screen relative overflow-hidden">
+        <!-- Light Ellipse Decorations -->
+        <div class="absolute top-0 right-0">
+            <img src="../images/light-ellipse.png" alt="" class=" object-contain rotate-180">
+        </div>
+        <div class="absolute bottom-0 left-0">
+            <img src="../images/light-ellipse.png" alt="" class=" object-contain">
+        </div>
+
+        <!-- Registration Section -->
+        <section class="min-h-screen flex items-center justify-center p-4 relative z-10">
+            <div class="max-w-[1500px] w-full">
+                <!-- Registration Card -->
+                <div class="bg-white rounded-3xl shadow-2xl p-8 lg:p-16 xl:p-29 xl:px-20">
+                    <!-- main header -->
+                    <div class="header flex flex-col md:flex-row items-center justify-between mb-10">
+                        <!-- Header -->
+                        <div class="w-full text-center md:text-right mb-4">
+                            <h2 class="text-2xl font-bold text-gray-800 mb-1">لمستخدم جديد ؟</h2>
+                            <p class="text-[var(--color-eighth)] text-lg">ابدأ رحلتك التعليمية معنا الآن!</p>
+                        </div>
+                        <!-- Logo -->
+                        <div class="">
+                            <img src="../images/inline-logo.svg" alt="Phases Academy Logo" class="h-16">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-3 xl:gap-10 gap-6">
+                        <!-- Right Column - Header and Main Form -->
+                        <div class="space-y-4">
+                            <!-- Registration Form -->
+                            <form class="space-y-6">
+                                <!-- Full Name -->
+                                <div>
+                                    <label class="block text-right text-gray-700 text-sm mb-2">
+                                        اسم المتدرب (الاسم بالعربي) <span class="text-red-500">*</span>
+                                    </label>
+                                    <input type="text"
+                                        class="w-full px-4 py-3 bg-white border border-gray-300 rounded-md text-right text-sm focus:outline-none focus:border-[var(--color-primary)]"
+                                        required>
+                                </div>
+
+                                <!-- ID Number -->
+                                <div>
+                                    <label class="block text-right text-gray-700 text-sm mb-2">
+                                        رقم الهوية <span class="text-red-500">*</span>
+                                    </label>
+                                    <input type="text"
+                                        class="w-full px-4 py-3 bg-white border border-gray-300 rounded-md text-right text-sm focus:outline-none focus:border-[var(--color-primary)]"
+                                        required>
+                                </div>
+
+                                <!-- Birth Date -->
+                                <div>
+                                    <label class="block text-right text-gray-700 text-sm mb-2">
+                                        تاريخ الميلاد <span class="text-red-500">*</span>
+                                    </label>
+                                    <input type="date"
+                                        class="w-full px-4 py-3 bg-white border border-gray-300 rounded-md text-right text-sm focus:outline-none focus:border-[var(--color-primary)]"
+                                        required>
+                                </div>
+
+                                <!-- Email -->
+                                <div>
+                                    <label class="block text-right text-gray-700 text-sm mb-2">
+                                        البريد الالكتروني <span class="text-red-500">*</span>
+                                    </label>
+                                    <input type="email"
+                                        class="w-full px-4 py-3 bg-white border border-gray-300 rounded-md text-right text-sm focus:outline-none focus:border-[var(--color-primary)]"
+                                        required>
+                                    <p class="text-xs text-red-500 text-right mt-1">سيتم ارسال رسالة تفعيل الحساب للبريد
+                                        الالكتروني المدخل</p>
+                                </div>
+                            </form>
+                        </div>
+
+                        <!-- Middle Column - Additional Info -->
+                        <div class="space-y-6">
+                            <!-- Mobile Number -->
+                            <div>
+                                <label class="block text-right text-gray-700 text-sm mb-2">
+                                    رقم الجوال <span class="text-red-500">*</span>
+                                </label>
+                                <input type="tel"
+                                    class="w-full px-4 py-3 bg-white border border-gray-300 rounded-md text-right text-sm focus:outline-none focus:border-[var(--color-primary)]"
+                                    required>
+                                <p class="text-xs text-red-500 text-right mt-1">يرجى ادخال رقم الجوال او الاقامة الخاص
+                                    بك او رقم الهوية المدخل</p>
+                            </div>
+
+                            <!-- qualification -->
+                            <div>
+                                <label class="block text-right text-gray-700 text-sm mb-2">
+                                    المؤهل <span class="text-red-500">*</span>
+                                </label>
+                                <input type="text"
+                                    class="w-full px-4 py-3 bg-white border border-gray-300 rounded-md text-right text-sm focus:outline-none focus:border-[var(--color-primary)]"
+                                    required>
+                            </div>
+
+                            <!-- Gender -->
+                            <div>
+                                <label class="block text-right text-gray-700 text-sm mb-2">
+                                    الجنس <span class="text-red-500">*</span>
+                                </label>
+                                <div class="flex items-center justify-start gap-6">
+                                    <div class="flex items-center gap-2">
+                                        <input type="checkbox" id="male" name="gender-male"
+                                        class="w-5 h-5 border-2 border-[var(--color-primary)] rounded cursor-pointer accent-[var(--color-primary)]"
+                                        onclick="document.getElementById('female').checked = false;">
+                                        <label for="male"
+                                            class="text-sm cursor-pointer select-none text-[var(--color-primary)]">ذكر</label>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <input type="checkbox" id="female" name="gender-female"
+                                            class="w-5 h-5 border-2 border-[var(--color-primary)] rounded cursor-pointer accent-[var(--color-primary)]"
+                                            onclick="document.getElementById('male').checked = false;">
+                                        <label for="female"
+                                            class="text-sm cursor-pointer select-none text-[var(--color-primary)]">أنثى</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Nationality -->
+                            <div>
+                                <label class="block text-right text-gray-700 text-sm mb-2">
+                                    الجنسية <span class="text-red-500">*</span>
+                                </label>
+                                <select
+                                    class="w-full px-4 py-3 bg-white border border-gray-300 rounded-md text-right text-sm focus:outline-none focus:border-[var(--color-primary)]"
+                                    required>
+                                    <option value="">اختر</option>
+                                    <option value="sa">سعودي</option>
+                                    <option value="other">أخرى</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Left Column - Logo and Password -->
+                        <div class="space-y-6">
+                            <!-- Password Section -->
+                            <div class="space-y-6">
+                                <!-- Password -->
+                                <div>
+                                    <label class="block text-right text-gray-700 text-sm mb-2">
+                                        كلمة المرور <span class="text-red-500">*</span>
+                                    </label>
+                                    <input type="password" placeholder="كلمة المرور"
+                                        class="w-full px-4 py-3 bg-white border border-gray-300 rounded-md text-right text-sm placeholder:text-gray-400 focus:outline-none focus:border-[var(--color-primary)]"
+                                        required>
+                                </div>
+
+                                <!-- Confirm Password -->
+                                <div class="confirm space-y-2">
+                                    <div>
+                                        <label class="block text-right text-gray-700 text-sm mb-2">
+                                            تأكيد كلمة المرور
+                                        </label>
+                                        <input type="password" placeholder="تأكيد كلمة المرور"
+                                            class="w-full px-4 py-3 bg-white border border-gray-300 rounded-md text-right text-sm placeholder:text-gray-400 focus:outline-none focus:border-[var(--color-primary)]"
+                                            required>
+                                    </div>
+                                    
+                                    <!-- Checkboxes -->
+                                    <div class="space-y-1 text-sm">
+                                        <div class="flex items-center justify-start gap-2">
+                                            <input type="checkbox" id="terms"
+                                                class="w-4 h-4 border-gray-300 rounded cursor-pointer accent-[var(--color-primary)]" required>
+                                            <label for="terms" class="cursor-pointer select-none">
+                                                <span class="text-[var(--color-primary)]">أوافق على</span>
+                                                <a href="" class="text-[var(--color-fifth)] underline">سياسة الخصوصية</a>
+                                            </label>
+                                        </div>
+                                        <div class="flex items-center justify-start gap-2">
+                                            <input type="checkbox" id="conditions"
+                                                class="w-4 h-4 border-gray-300 rounded cursor-pointer accent-[var(--color-primary)]" required>
+                                            <label for="conditions" class="cursor-pointer select-none text-[var(--color-primary)]">أتعهد أن جميع
+                                                البيانات المسجلة صحيحة</label>
+                                        </div>
+                                        <div class="flex items-center justify-start gap-2">
+                                            <p class="text-red-500 text-xs">
+                                                أي خطأ في البيانات سبب لتأخير الشهادة ورسوم التعديل ( 100 ) ريال</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Buttons -->
+                                <div class="flex items-center gap-3 pt-4">
+                                    <button type="button"
+                                        class="cursor-pointer bg-[var(--color-primary)] hover:bg-[var(--color-fifth)] text-white text-sm py-3 px-10 rounded-md font-medium transition-colors duration-200">
+                                        إرسال
+                                    </button>
+                                    <a href="" class="w-full">
+                                        <button type="button"
+                                            class="cursor-pointer w-full bg-[var(--color-sixth)] hover:bg-[var(--color-fifth)] text-white text-sm py-3 rounded-md font-medium transition-colors duration-200">
+                                            إنشاء تذكرة دعم
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>

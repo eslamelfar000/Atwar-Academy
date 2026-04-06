@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../icons/fontawesome-free-7.2.0-web/fontawesome-free-7.2.0-web/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Atwar - Employee Login</title>
+</head>
+
+<body class="bg-gradient-to-br from-blue-50 to-blue-100 min-h-screen">
+    <!-- Login Section -->
+    <section class="min-h-screen flex items-center justify-center py-12 px-4">
+        <div class="max-w-lg w-full">
+
+            <!-- Logo -->
+            <div class="logo max-w-72 mx-auto mb-2">
+                <img src="../images/nav-logo.svg" alt="" class="w-full h-full">
+            </div>
+
+
+            <!-- Login Card -->
+            <div class="bg-white rounded-3xl shadow-lg p-10 px-14">
+                <!-- Header -->
+                <div class="text-center mb-8">
+                    <h1 class="text-2xl md:text-3xl font-bold mb-1">منصة معهد أكاديمية</h1>
+                    <h2 class="text-2xl md:text-3xl font-semibold">أطوار العالي للتدريب</h2>
+                </div>
+
+                <!-- Login Form -->
+                <form class="space-y-6">
+                    <!-- ID Number Field -->
+                    <div>
+                        <label for="id-number" class="block text-right text-gray-700 text-sm mb-2">
+                            رقم الهوية
+                        </label>
+                        <input type="text" id="id-number" placeholder="رقم الهوية"
+                            class="w-full px-4 py-3 text-sm border border-gray-300 rounded-md text-right placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[var(--color-fifth)] focus:border-transparent"
+                            required>
+                    </div>
+
+                    <!-- Password Field -->
+                    <div>
+                        <div class="flex justify-between items-center mb-2">
+                            <label for="password" class="text-right text-gray-700 text-sm">
+                                كلمة المرور
+                            </label>
+                            <a href="#" class="text-xs text-[var(--color-fifth)] hover:text-[var(--color-third)]">هل
+                                نسيت كلمة المرور؟</a>
+                        </div>
+                        <input type="password" id="password" placeholder="كلمة المرور"
+                            class="w-full px-4 py-3 text-sm border border-gray-300 rounded-md text-right placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[var(--color-fifth)] focus:border-transparent"
+                            required>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="pt-2">
+                        <button type="submit"
+                            class="w-full cursor-pointer text-sm bg-[var(--color-primary)] hover:bg-[var(--color-secondary)] text-white py-3 rounded-md font-medium transition-colors duration-200">
+                            تسجيل الدخول
+                        </button>
+                    </div>
+
+                    <!-- Register Link -->
+                    <div class="text-center pt-2">
+                        <p class="text-sm text-gray-600">
+                            ليس لديك حساب؟
+                            <a href="#"
+                                class="text-[var(--color-fifth)] hover:text-[var(--color-third)] font-medium">انشاء
+                                حساب جديد</a>
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

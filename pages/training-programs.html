@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../icons/fontawesome-free-7.2.0-web/fontawesome-free-7.2.0-web/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Atwar - Training Programs</title>
+</head>
+
+<body>
+
+    <!-- page actions [ breadcrumb, search , per page selection ] -->
+    <section class="page-actions relative  py-6 pt-16 bg-white">
+        <div class="max-w-7xl mx-auto px-8 sm:px-6 z-10 space-y-6">
+            <!-- breadcrumb -->
+            <div class="breadcrumb">
+                <ul class="flex items-center gap-2">
+                    <li>
+                        <a href="#" class="text-[var(--color-primary)] text-lg">
+                            <i class="fa-regular fa-house"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-chevron-left text-xs text-[var(--color-primary)]"></i>
+                    </li>
+                    <li>
+                        <p class="">الخطة التدريبية</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="our-programs py-16 bg-white">
+        <div class="max-w-[1400px] mx-auto px-4 sm:px-8 sm:px-6 z-10">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-4">
+                <!-- sidebar filters -->
+                <div class="col-span-12 lg:col-span-3 space-y-4">
+                    <div class="title">
+                        <h1 class="text-md font-bold">برامجنا التدريبية</h1>
+                    </div>
+
+                    <!-- filters -->
+                    <div class="filters space-y-8 sticky top-26">
+                        <!-- الأقسام Section -->
+                        <div class="filter space-y-4">
+                            <div class="filter-title px-4 py-3 cursor-pointer bg-[var(--color-primary)] select-none"
+                                onclick="toggleAccordion(this)">
+                                <div class="flex items-center justify-between">
+                                    <h3 class="filter-title-text font-semibold text-white ">الأقسام</h3>
+                                    <i class="fas fa-plus text-white transition-all duration-300 ease-in-out"></i>
+                                    <i
+                                        class="fas fa-minus text-white hidden transition-all duration-300 ease-in-out"></i>
+                                </div>
+                            </div>
+                            <div class="filter-content transition-all duration-300 ease-in-out overflow-hidden">
+                                <ul class="filter-content-list space-y-2">
+                                    <ul class="filter-content-list space-y-2">
+                                        <li class="flex items-center gap-3 select-none mr-6">
+                                            <input type="checkbox" id="filter-management"
+                                                class="w-4 h-4 rounded accent-[var(--color-primary)]">
+                                            <label for="filter-management"
+                                                class="select-none text-[var(--color-primary)] cursor-pointer">الادارة</label>
+                                        </li>
+                                        <li class="flex items-center gap-3 select-none mr-6">
+                                            <input type="checkbox" id="filter-design"
+                                                class="w-4 h-4 rounded accent-[var(--color-primary)]">
+                                            <label for="filter-design"
+                                                class="select-none text-[var(--color-primary)] cursor-pointer">التصميم</label>
+                                        </li>
+                                        <li class="flex items-center gap-3 select-none mr-6">
+                                            <input type="checkbox" id="filter-computer"
+                                                class="w-4 h-4 accent-[var(--color-primary)]">
+                                            <label for="filter-computer"
+                                                class="select-none text-[var(--color-primary)] cursor-pointer">الحاسب
+                                                الالي</label>
+                                        </li>
+                                        <li class="flex items-center gap-3 select-none mr-6">
+                                            <input type="checkbox" id="filter-law"
+                                                class="w-4 h-4 rounded accent-[var(--color-primary)]">
+                                            <label for="filter-law"
+                                                class="select-none text-[var(--color-primary)] cursor-pointer">القانون</label>
+                                        </li>
+                                        <li class="flex items-center gap-3 select-none mr-6">
+                                            <input type="checkbox" id="filter-health"
+                                                class="w-4 h-4 rounded accent-[var(--color-primary)]">
+                                            <label for="filter-health"
+                                                class="select-none text-[var(--color-primary)] cursor-pointer">الصحة
+                                                والسلامة</label>
+                                        </li>
+                                        <li class="flex items-center gap-3 select-none mr-6">
+                                            <input type="checkbox" id="filter-self"
+                                                class="w-4 h-4 rounded accent-[var(--color-primary)]">
+                                            <label for="filter-self"
+                                                class="select-none text-[var(--color-primary)] cursor-pointer">تطوير
+                                                الذات</label>
+                                        </li>
+                                        <li class="flex items-center gap-3 select-none mr-6">
+                                            <input type="checkbox" id="filter-media"
+                                                class="w-4 h-4 rounded accent-[var(--color-primary)]">
+                                            <label for="filter-media"
+                                                class="select-none text-[var(--color-primary)] cursor-pointer">الاعلام
+                                                والعلاقات
+                                                العامة</label>
+                                        </li>
+                                        <li class="flex items-center gap-3 select-none mr-6">
+                                            <input type="checkbox" id="filter-accounting"
+                                                class="w-4 h-4 rounded accent-[var(--color-primary)]">
+                                            <label for="filter-accounting"
+                                                class="select-none text-[var(--color-primary)] cursor-pointer">المحاسبة
+                                                والمالية</label>
+                                        </li>
+                                        <li class="flex items-center gap-3 select-none mr-6">
+                                            <input type="checkbox" id="filter-engineering"
+                                                class="w-4 h-4 rounded accent-[var(--color-primary)]">
+                                            <label for="filter-engineering"
+                                                class="select-none text-[var(--color-primary)] cursor-pointer">الهندسة
+                                                والديكور</label>
+                                        </li>
+                                        <li class="flex items-center gap-3 select-none mr-6">
+                                            <input type="checkbox" id="filter-education"
+                                                class="w-4 h-4 rounded accent-[var(--color-primary)]">
+                                            <label for="filter-education"
+                                                class="select-none text-[var(--color-primary)] cursor-pointer">التعليم</label>
+                                        </li>
+                                        <li class="flex items-center gap-3 select-none mr-6">
+                                            <input type="checkbox" id="filter-tourism"
+                                                class="w-4 h-4 rounded accent-[var(--color-primary)]">
+                                            <label for="filter-tourism"
+                                                class="select-none text-[var(--color-primary)] cursor-pointer">السياحة</label>
+                                        </li>
+                                        <li class="flex items-center gap-3 select-none mr-6">
+                                            <input type="checkbox" id="filter-sales"
+                                                class="w-4 h-4 rounded accent-[var(--color-primary)]">
+                                            <label for="filter-sales"
+                                                class="select-none text-[var(--color-primary)] cursor-pointer">المبيعات
+                                                والتسويق</label>
+                                        </li>
+                                    </ul>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- نوع الدورة Section -->
+                        <div class="filter space-y-4">
+                            <div class="filter-title px-4 py-3 cursor-pointer bg-[var(--color-primary)] text-white select-none"
+                                onclick="toggleAccordion(this)">
+                                <div class="flex items-center justify-between">
+                                    <h3 class="filter-title-text font-semibold">نوع الدورة</h3>
+                                    <i class="fas fa-plus text-white"></i>
+                                    <i class="fas fa-minus text-white hidden"></i>
+                                </div>
+                            </div>
+                            <div class="filter-content transition-all duration-300 ease-in-out overflow-hidden">
+                                <ul class="filter-content-list space-y-2">
+                                    <li class="flex items-center gap-3 select-none mr-6">
+                                        <input type="checkbox" id="filter-onsite"
+                                            class="w-4 h-4 rounded accent-[var(--color-primary)]">
+                                        <label for="filter-onsite"
+                                            class="select-none text-[var(--color-primary)] cursor-pointer">حضوري
+                                            في
+                                            الأكاديمية</label>
+                                    </li>
+                                    <li class="flex items-center gap-3 select-none mr-6">
+                                        <input type="checkbox" id="filter-online"
+                                            class="w-4 h-4 rounded accent-[var(--color-primary)]">
+                                        <label for="filter-online"
+                                            class="select-none text-[var(--color-primary)] cursor-pointer">عن
+                                            بعد (
+                                            اونلاين )</label>
+                                    </li>
+                                    <li class="flex items-center gap-3 select-none mr-6">
+                                        <input type="checkbox" id="filter-recorded"
+                                            class="w-4 h-4 rounded accent-[var(--color-primary)]">
+                                        <label for="filter-recorded"
+                                            class="select-none text-[var(--color-primary)] cursor-pointer">غير
+                                            متزامن (
+                                            مسجلة )</label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Search Button -->
+                        <div class="flex justify-end">
+                            <button
+                                class="search-button py-3 px-4 text-sm rounded-lg font-semibold bg-green-500 text-white hover:bg-green-700 transition-all duration-300 cursor-pointer flex items-center justify-center gap-2">
+                                <i class="fas fa-search"></i>
+                                البحث
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- programs -->
+                <div class="col-span-12 lg:col-span-9">
+                    <div class="programs">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
+                            <!-- program -->
+                            <div class="program overflow-hidden h-full">
+                                <div class="program-image relative">
+                                    <img src="../images/program-card-img.png" alt="" class="w-full h-48 object-contain">
+                                </div>
+                                <div class="program-content h-full bg-[var(--color-primary)] p-6 text-white space-y-4">
+                                    <h3 class="program-title text-md font-semibold">برنامج اللغة الإنجليزية المستوى
+                                        الأول</h3>
+                                    <div class="program-details text-sm flex items-center flex-wrap gap-2">
+                                        <div class="flex items-center gap-1 bg-white/10 p-2 rounded-sm text-xs">
+                                            <i class="fa-regular fa-calendar text-white"></i>
+                                            <span>5 أيام تدريبية</span>
+                                        </div>
+                                        <div class="flex items-center gap-1 bg-white/10 p-2 rounded-sm text-xs">
+                                            <i class="fa-regular fa-clock text-white"></i>
+                                            <span>5 ساعات تدريبية</span>
+                                        </div>
+                                        <div class="flex items-center gap-1 bg-white/10 p-2 rounded-sm text-xs">
+                                            <i class="fa-solid fa-house text-white"></i>
+                                            <span>حضوري</span>
+                                        </div>
+                                    </div>
+                                    <a href="">
+                                        <button
+                                            class="py-2 px-4 text-sm mt-6 rounded-sm cursor-pointer font-semibold bg-green-500 text-white hover:bg-green-600 transition-all duration-300">
+                                            سجل بدورة
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="program overflow-hidden h-full">
+                                <div class="program-image relative">
+                                    <img src="../images/program-card-img.png" alt="" class="w-full h-48 object-contain">
+                                </div>
+                                <div class="program-content h-full bg-[var(--color-primary)] p-6 text-white space-y-4">
+                                    <h3 class="program-title text-md font-semibold">برنامج اللغة الإنجليزية المستوى
+                                        الأول</h3>
+                                    <div class="program-details text-sm flex items-center flex-wrap gap-2">
+                                        <div class="flex items-center gap-1 bg-white/10 p-2 rounded-sm text-xs">
+                                            <i class="fa-regular fa-calendar text-white"></i>
+                                            <span>5 أيام تدريبية</span>
+                                        </div>
+                                        <div class="flex items-center gap-1 bg-white/10 p-2 rounded-sm text-xs">
+                                            <i class="fa-regular fa-clock text-white"></i>
+                                            <span>5 ساعات تدريبية</span>
+                                        </div>
+                                        <div class="flex items-center gap-1 bg-white/10 p-2 rounded-sm text-xs">
+                                            <i class="fa-solid fa-house text-white"></i>
+                                            <span>حضوري</span>
+                                        </div>
+                                    </div>
+                                    <a href="">
+                                        <button
+                                            class="py-2 px-4 text-sm mt-6 rounded-sm cursor-pointer font-semibold bg-green-500 text-white hover:bg-green-600 transition-all duration-300">
+                                            سجل بدورة
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="program overflow-hidden h-full">
+                                <div class="program-image relative">
+                                    <img src="../images/program-card-img.png" alt="" class="w-full h-48 object-contain">
+                                </div>
+                                <div class="program-content h-full bg-[var(--color-primary)] p-6 text-white space-y-4">
+                                    <h3 class="program-title text-md font-semibold">برنامج اللغة الإنجليزية المستوى
+                                        الأول</h3>
+                                    <div class="program-details text-sm flex items-center flex-wrap gap-2">
+                                        <div class="flex items-center gap-1 bg-white/10 p-2 rounded-sm text-xs">
+                                            <i class="fa-regular fa-calendar text-white"></i>
+                                            <span>5 أيام تدريبية</span>
+                                        </div>
+                                        <div class="flex items-center gap-1 bg-white/10 p-2 rounded-sm text-xs">
+                                            <i class="fa-regular fa-clock text-white"></i>
+                                            <span>5 ساعات تدريبية</span>
+                                        </div>
+                                        <div class="flex items-center gap-1 bg-white/10 p-2 rounded-sm text-xs">
+                                            <i class="fa-solid fa-house text-white"></i>
+                                            <span>حضوري</span>
+                                        </div>
+                                    </div>
+                                    <a href="">
+                                        <button
+                                            class="py-2 px-4 text-sm mt-6 rounded-sm cursor-pointer font-semibold bg-green-500 text-white hover:bg-green-600 transition-all duration-300">
+                                            سجل بدورة
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="program overflow-hidden h-full">
+                                <div class="program-image relative">
+                                    <img src="../images/program-card-img.png" alt="" class="w-full h-48 object-contain">
+                                </div>
+                                <div class="program-content h-full bg-[var(--color-primary)] p-6 text-white space-y-4">
+                                    <h3 class="program-title text-md font-semibold">برنامج اللغة الإنجليزية المستوى
+                                        الأول</h3>
+                                    <div class="program-details text-sm flex items-center flex-wrap gap-2">
+                                        <div class="flex items-center gap-1 bg-white/10 p-2 rounded-sm text-xs">
+                                            <i class="fa-regular fa-calendar text-white"></i>
+                                            <span>5 أيام تدريبية</span>
+                                        </div>
+                                        <div class="flex items-center gap-1 bg-white/10 p-2 rounded-sm text-xs">
+                                            <i class="fa-regular fa-clock text-white"></i>
+                                            <span>5 ساعات تدريبية</span>
+                                        </div>
+                                        <div class="flex items-center gap-1 bg-white/10 p-2 rounded-sm text-xs">
+                                            <i class="fa-solid fa-house text-white"></i>
+                                            <span>حضوري</span>
+                                        </div>
+                                    </div>
+                                    <a href="">
+                                        <button
+                                            class="py-2 px-4 text-sm mt-6 rounded-sm cursor-pointer font-semibold bg-green-500 text-white hover:bg-green-600 transition-all duration-300">
+                                            سجل بدورة
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="program overflow-hidden h-full">
+                                <div class="program-image relative">
+                                    <img src="../images/program-card-img.png" alt="" class="w-full h-48 object-contain">
+                                </div>
+                                <div class="program-content h-full bg-[var(--color-primary)] p-6 text-white space-y-4">
+                                    <h3 class="program-title text-md font-semibold">برنامج اللغة الإنجليزية المستوى
+                                        الأول</h3>
+                                    <div class="program-details text-sm flex items-center flex-wrap gap-2">
+                                        <div class="flex items-center gap-1 bg-white/10 p-2 rounded-sm text-xs">
+                                            <i class="fa-regular fa-calendar text-white"></i>
+                                            <span>5 أيام تدريبية</span>
+                                        </div>
+                                        <div class="flex items-center gap-1 bg-white/10 p-2 rounded-sm text-xs">
+                                            <i class="fa-regular fa-clock text-white"></i>
+                                            <span>5 ساعات تدريبية</span>
+                                        </div>
+                                        <div class="flex items-center gap-1 bg-white/10 p-2 rounded-sm text-xs">
+                                            <i class="fa-solid fa-house text-white"></i>
+                                            <span>حضوري</span>
+                                        </div>
+                                    </div>
+                                    <a href="">
+                                        <button
+                                            class="py-2 px-4 text-sm mt-6 rounded-sm cursor-pointer font-semibold bg-green-500 text-white hover:bg-green-600 transition-all duration-300">
+                                            سجل بدورة
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="program overflow-hidden h-full">
+                                <div class="program-image relative">
+                                    <img src="../images/program-card-img.png" alt="" class="w-full h-48 object-contain">
+                                </div>
+                                <div class="program-content h-full bg-[var(--color-primary)] p-6 text-white space-y-4">
+                                    <h3 class="program-title text-md font-semibold">برنامج اللغة الإنجليزية المستوى
+                                        الأول</h3>
+                                    <div class="program-details text-sm flex items-center flex-wrap gap-2">
+                                        <div class="flex items-center gap-1 bg-white/10 p-2 rounded-sm text-xs">
+                                            <i class="fa-regular fa-calendar text-white"></i>
+                                            <span>5 أيام تدريبية</span>
+                                        </div>
+                                        <div class="flex items-center gap-1 bg-white/10 p-2 rounded-sm text-xs">
+                                            <i class="fa-regular fa-clock text-white"></i>
+                                            <span>5 ساعات تدريبية</span>
+                                        </div>
+                                        <div class="flex items-center gap-1 bg-white/10 p-2 rounded-sm text-xs">
+                                            <i class="fa-solid fa-house text-white"></i>
+                                            <span>حضوري</span>
+                                        </div>
+                                    </div>
+                                    <a href="">
+                                        <button
+                                            class="py-2 px-4 text-sm mt-6 rounded-sm cursor-pointer font-semibold bg-green-500 text-white hover:bg-green-600 transition-all duration-300">
+                                            سجل بدورة
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="program overflow-hidden h-full">
+                                <div class="program-image relative">
+                                    <img src="../images/program-card-img.png" alt="" class="w-full h-48 object-contain">
+                                </div>
+                                <div class="program-content h-full bg-[var(--color-primary)] p-6 text-white space-y-4">
+                                    <h3 class="program-title text-md font-semibold">برنامج اللغة الإنجليزية المستوى
+                                        الأول</h3>
+                                    <div class="program-details text-sm flex items-center flex-wrap gap-2">
+                                        <div class="flex items-center gap-1 bg-white/10 p-2 rounded-sm text-xs">
+                                            <i class="fa-regular fa-calendar text-white"></i>
+                                            <span>5 أيام تدريبية</span>
+                                        </div>
+                                        <div class="flex items-center gap-1 bg-white/10 p-2 rounded-sm text-xs">
+                                            <i class="fa-regular fa-clock text-white"></i>
+                                            <span>5 ساعات تدريبية</span>
+                                        </div>
+                                        <div class="flex items-center gap-1 bg-white/10 p-2 rounded-sm text-xs">
+                                            <i class="fa-solid fa-house text-white"></i>
+                                            <span>حضوري</span>
+                                        </div>
+                                    </div>
+                                    <a href="">
+                                        <button
+                                            class="py-2 px-4 text-sm mt-6 rounded-sm cursor-pointer font-semibold bg-green-500 text-white hover:bg-green-600 transition-all duration-300">
+                                            سجل بدورة
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="program overflow-hidden h-full">
+                                <div class="program-image relative">
+                                    <img src="../images/program-card-img.png" alt="" class="w-full h-48 object-contain">
+                                </div>
+                                <div class="program-content h-full bg-[var(--color-primary)] p-6 text-white space-y-4">
+                                    <h3 class="program-title text-md font-semibold">برنامج اللغة الإنجليزية المستوى
+                                        الأول</h3>
+                                    <div class="program-details text-sm flex items-center flex-wrap gap-2">
+                                        <div class="flex items-center gap-1 bg-white/10 p-2 rounded-sm text-xs">
+                                            <i class="fa-regular fa-calendar text-white"></i>
+                                            <span>5 أيام تدريبية</span>
+                                        </div>
+                                        <div class="flex items-center gap-1 bg-white/10 p-2 rounded-sm text-xs">
+                                            <i class="fa-regular fa-clock text-white"></i>
+                                            <span>5 ساعات تدريبية</span>
+                                        </div>
+                                        <div class="flex items-center gap-1 bg-white/10 p-2 rounded-sm text-xs">
+                                            <i class="fa-solid fa-house text-white"></i>
+                                            <span>حضوري</span>
+                                        </div>
+                                    </div>
+                                    <a href="">
+                                        <button
+                                            class="py-2 px-4 text-sm mt-6 rounded-sm cursor-pointer font-semibold bg-green-500 text-white hover:bg-green-600 transition-all duration-300">
+                                            سجل بدورة
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="program overflow-hidden h-full">
+                                <div class="program-image relative">
+                                    <img src="../images/program-card-img.png" alt="" class="w-full h-48 object-contain">
+                                </div>
+                                <div class="program-content h-full bg-[var(--color-primary)] p-6 text-white space-y-4">
+                                    <h3 class="program-title text-md font-semibold">برنامج اللغة الإنجليزية المستوى
+                                        الأول</h3>
+                                    <div class="program-details text-sm flex items-center flex-wrap gap-2">
+                                        <div class="flex items-center gap-1 bg-white/10 p-2 rounded-sm text-xs">
+                                            <i class="fa-regular fa-calendar text-white"></i>
+                                            <span>5 أيام تدريبية</span>
+                                        </div>
+                                        <div class="flex items-center gap-1 bg-white/10 p-2 rounded-sm text-xs">
+                                            <i class="fa-regular fa-clock text-white"></i>
+                                            <span>5 ساعات تدريبية</span>
+                                        </div>
+                                        <div class="flex items-center gap-1 bg-white/10 p-2 rounded-sm text-xs">
+                                            <i class="fa-solid fa-house text-white"></i>
+                                            <span>حضوري</span>
+                                        </div>
+                                    </div>
+                                    <a href="">
+                                        <button
+                                            class="py-2 px-4 text-sm mt-6 rounded-sm cursor-pointer font-semibold bg-green-500 text-white hover:bg-green-600 transition-all duration-300">
+                                            سجل بدورة
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+    function toggleAccordion(element) {
+        const filterContent = element.nextElementSibling;
+        const minus = element.querySelector('.fa-minus');
+        const plus = element.querySelector('.fa-plus');
+
+        filterContent.classList.toggle('hidden');
+
+        if (filterContent.classList.contains('hidden')) {
+            plus.style.display = 'inline-block';
+            minus.style.display = 'none';
+        } else {
+            plus.style.display = 'none';
+            minus.style.display = 'inline-block';
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const allAccordions = document.querySelectorAll('.filter-title');
+        const allContents = document.querySelectorAll('.filter-content');
+
+        const isMobile = window.innerWidth <= 768; // breakpoint
+
+        allContents.forEach(content => {
+            if (isMobile) {
+                content.classList.add('hidden'); // closed on mobile
+            } else {
+                content.classList.remove('hidden'); // open on desktop
+            }
+        });
+
+        allAccordions.forEach(accordion => {
+            const minus = accordion.querySelector('.fa-minus');
+            const plus = accordion.querySelector('.fa-plus');
+
+            if (isMobile) {
+                plus.style.display = 'inline-block';
+                minus.style.display = 'none';
+            } else {
+                plus.style.display = 'none';
+                minus.style.display = 'inline-block';
+            }
+        });
+    });
+    </script>
+</body>
+
+</html>
