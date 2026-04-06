@@ -1,8 +1,20 @@
 {
   "rewrites": [
     {
-      "source": "/(.*)",
+      "source": "/",
       "destination": "/index.html"
+    },
+    {
+      "source": "/components/(.*)",
+      "destination": "/components/$1"
+    },
+    {
+      "source": "/pages/(.*)",
+      "destination": "/pages/$1"
+    },
+    {
+      "source": "/pages/SuccessPages/(.*)",
+      "destination": "/pages/SuccessPages/$1"
     }
   ],
   "headers": [
