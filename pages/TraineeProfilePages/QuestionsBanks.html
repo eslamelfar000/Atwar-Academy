@@ -1,14 +1,415 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Questions Banks</title>
+    <title>بنك الأسئلة</title>
     <link rel="stylesheet" href="../../css/main.css">
     <link rel="stylesheet" href="../../icons/fontawesome-free-7.2.0-web/fontawesome-free-7.2.0-web/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="../../js/TraineeLayout.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tom-select/dist/css/tom-select.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/tom-select/dist/js/tom-select.complete.min.js"></script>
 </head>
+
 <body>
-    
+    <trainee-layout active-tab="questionBank">
+        <div class="bank-questions">
+            <!-- head -->
+            <div
+                class="head relative mb-4 sm:mb-8 p-2 px-4 md:px-10 text-center bg-[var(--color-forth)] flex items-center justify-between">
+                <div class="flex items-center">
+                    <svg width="25" height="28" viewBox="0 0 25 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M23.1899 13.6651V20.4686C23.1899 23.0348 23.1899 24.3166 22.3926 25.114C21.5952 25.9113 20.3135 25.9113 17.7472 25.9113H4.82066C3.91847 25.9113 3.05323 25.5529 2.41529 24.915C1.77734 24.277 1.41895 23.4118 1.41895 22.5096M23.1899 13.6651V6.8617C23.1899 4.29544 23.1899 3.01367 22.3926 2.21631C21.5952 1.41895 20.3135 1.41895 17.7472 1.41895H6.8617C4.29544 1.41895 3.01367 1.41895 2.21631 2.21631C1.41895 3.01367 1.41895 4.29544 1.41895 6.8617V22.5096M23.1899 13.6651C23.1899 16.2314 23.1899 17.5132 22.3926 18.3105C21.5952 19.1079 20.3135 19.1079 17.7472 19.1079H4.82066C3.91847 19.1079 3.05323 19.4663 2.41529 20.1042C1.77734 20.7422 1.41895 21.6074 1.41895 22.5096"
+                            stroke="#969696" stroke-width="2.83832" />
+                        <path d="M8.22266 8.22363H16.3868" stroke="#969696" stroke-width="2.83832"
+                            stroke-linecap="round" />
+                    </svg>
+
+                    <h1 class="text-xl -mr-2 sm:text-2xl p-6 font-bold text-[var(--color-ninth)] ">
+                        بنك الأسئلة</h1>
+                </div>
+                <!-- Mobile Menu Button -->
+                <button id="menuToggle"
+                    class="lg:hidden text-[var(--color-primary)] cursor-pointer p-1 pt-2 bg-[var(--color-primary)]/10 hover:bg-[var(--color-primary)]/20 rounded-lg transition-all duration-300">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+
+
+
+            <!-- content -->
+            <div class="content p-4 sm:p-6 md:p-8">
+                <div class="items">
+                    <a href=""
+                        class="item flex items-center justify-between hover:bg-[var(--color-primary)]/10 gap-4 py-3 px-2 border-b border-[var(--color-ninth)] transition-all duration-300">
+                        <div class="right flex items-center gap-4">
+                            <div class="icon">
+                                <svg width="26" height="33" viewBox="0 0 26 33" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M22.6816 32.4023H0V3.24023H16.2012L22.6816 9.7207V32.4023Z"
+                                        fill="#42A5F5" />
+                                    <path d="M25.9219 29.1621H3.24023V0H19.4414L25.9219 6.48047V29.1621Z"
+                                        fill="#90CAF9" />
+                                    <path d="M24.7068 7.29028H18.6313V1.21484L24.7068 7.29028Z" fill="#E1F5FE" />
+                                    <path
+                                        d="M13.3656 19.6848C13.3656 15.8775 16.2818 16.1206 16.2818 13.8524C16.2818 13.2854 16.1198 12.1513 14.6617 12.1513C13.0416 12.1513 12.9606 13.4474 12.9606 13.7714H10.7734C10.7734 13.2043 11.0165 10.3691 14.6617 10.3691C18.388 10.3691 18.469 13.2854 18.469 13.8524C18.469 16.6876 15.3908 17.0926 15.3908 19.7658H13.3656V19.6848ZM13.2036 22.52C13.2036 22.358 13.2036 21.3049 14.4187 21.3049C15.5528 21.3049 15.6338 22.358 15.6338 22.52C15.6338 22.844 15.4718 23.6541 14.4187 23.6541C13.3656 23.6541 13.2036 22.844 13.2036 22.52Z"
+                                        fill="#1976D2" />
+                                </svg>
+                            </div>
+                            <div class="title">
+                                <h2 class="text-lg sm:text-xl font-bold text-[var(--color-tenth)]/80 ">أسئلة الوحدة
+                                    الأولى</h2>
+                            </div>
+                        </div>
+                        <div class="left">
+                            <div class="action">
+                                <svg width="22" height="23" viewBox="0 0 22 23" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20.6782 21.2295L2.86963 3.38086" stroke="#51A4DA" stroke-width="2"
+                                        stroke-linecap="round" />
+                                    <path d="M3.82468 11.877L1.36963 1.4541L11.7739 4.56892" stroke="#51A4DA"
+                                        stroke-width="2" stroke-linecap="round" />
+                                </svg>
+                            </div>
+                        </div>
+                    </a>
+                    <a href=""
+                        class="item flex items-center justify-between hover:bg-[var(--color-primary)]/10 gap-4 py-3 px-2 border-b border-[var(--color-ninth)] transition-all duration-300">
+                        <div class="right flex items-center gap-4">
+                            <div class="icon">
+                                <svg width="26" height="33" viewBox="0 0 26 33" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M22.6816 32.4023H0V3.24023H16.2012L22.6816 9.7207V32.4023Z"
+                                        fill="#42A5F5" />
+                                    <path d="M25.9219 29.1621H3.24023V0H19.4414L25.9219 6.48047V29.1621Z"
+                                        fill="#90CAF9" />
+                                    <path d="M24.7068 7.29028H18.6313V1.21484L24.7068 7.29028Z" fill="#E1F5FE" />
+                                    <path
+                                        d="M13.3656 19.6848C13.3656 15.8775 16.2818 16.1206 16.2818 13.8524C16.2818 13.2854 16.1198 12.1513 14.6617 12.1513C13.0416 12.1513 12.9606 13.4474 12.9606 13.7714H10.7734C10.7734 13.2043 11.0165 10.3691 14.6617 10.3691C18.388 10.3691 18.469 13.2854 18.469 13.8524C18.469 16.6876 15.3908 17.0926 15.3908 19.7658H13.3656V19.6848ZM13.2036 22.52C13.2036 22.358 13.2036 21.3049 14.4187 21.3049C15.5528 21.3049 15.6338 22.358 15.6338 22.52C15.6338 22.844 15.4718 23.6541 14.4187 23.6541C13.3656 23.6541 13.2036 22.844 13.2036 22.52Z"
+                                        fill="#1976D2" />
+                                </svg>
+                            </div>
+                            <div class="title">
+                                <h2 class="text-lg sm:text-xl font-bold text-[var(--color-tenth)]/80 ">أسئلة الوحدة
+                                    الثانية</h2>
+                            </div>
+                        </div>
+                        <div class="left">
+                            <div class="action">
+                                <svg width="22" height="23" viewBox="0 0 22 23" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20.6782 21.2295L2.86963 3.38086" stroke="#51A4DA" stroke-width="2"
+                                        stroke-linecap="round" />
+                                    <path d="M3.82468 11.877L1.36963 1.4541L11.7739 4.56892" stroke="#51A4DA"
+                                        stroke-width="2" stroke-linecap="round" />
+                                </svg>
+                            </div>
+                        </div>
+                    </a>
+                    <a href=""
+                        class="item flex items-center justify-between gap-4 py-3 px-2 hover:bg-[var(--color-primary)]/10 border-b border-[var(--color-ninth)] transition-all duration-300">
+                        <div class="right flex items-center gap-4">
+                            <div class="icon">
+                                <svg width="26" height="33" viewBox="0 0 26 33" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M22.6816 32.4023H0V3.24023H16.2012L22.6816 9.7207V32.4023Z"
+                                        fill="#42A5F5" />
+                                    <path d="M25.9219 29.1621H3.24023V0H19.4414L25.9219 6.48047V29.1621Z"
+                                        fill="#90CAF9" />
+                                    <path d="M24.7068 7.29028H18.6313V1.21484L24.7068 7.29028Z" fill="#E1F5FE" />
+                                    <path
+                                        d="M13.3656 19.6848C13.3656 15.8775 16.2818 16.1206 16.2818 13.8524C16.2818 13.2854 16.1198 12.1513 14.6617 12.1513C13.0416 12.1513 12.9606 13.4474 12.9606 13.7714H10.7734C10.7734 13.2043 11.0165 10.3691 14.6617 10.3691C18.388 10.3691 18.469 13.2854 18.469 13.8524C18.469 16.6876 15.3908 17.0926 15.3908 19.7658H13.3656V19.6848ZM13.2036 22.52C13.2036 22.358 13.2036 21.3049 14.4187 21.3049C15.5528 21.3049 15.6338 22.358 15.6338 22.52C15.6338 22.844 15.4718 23.6541 14.4187 23.6541C13.3656 23.6541 13.2036 22.844 13.2036 22.52Z"
+                                        fill="#1976D2" />
+                                </svg>
+                            </div>
+                            <div class="title">
+                                <h2 class="text-lg sm:text-xl font-bold text-[var(--color-tenth)]/80 ">أسئلة الوحدة
+                                    الثالثة</h2>
+                            </div>
+                        </div>
+                        <div class="left">
+                            <div class="action">
+                                <svg width="22" height="23" viewBox="0 0 22 23" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20.6782 21.2295L2.86963 3.38086" stroke="#51A4DA" stroke-width="2"
+                                        stroke-linecap="round" />
+                                    <path d="M3.82468 11.877L1.36963 1.4541L11.7739 4.56892" stroke="#51A4DA"
+                                        stroke-width="2" stroke-linecap="round" />
+                                </svg>
+                            </div>
+                        </div>
+                    </a>
+                    <a href=""
+                        class="item flex items-center justify-between gap-4 py-3 px-2 hover:bg-[var(--color-primary)]/10 border-b border-[var(--color-ninth)] transition-all duration-300">
+                        <div class="right flex items-center gap-4">
+                            <div class="icon">
+                                <svg width="26" height="33" viewBox="0 0 26 33" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M22.6816 32.4023H0V3.24023H16.2012L22.6816 9.7207V32.4023Z"
+                                        fill="#42A5F5" />
+                                    <path d="M25.9219 29.1621H3.24023V0H19.4414L25.9219 6.48047V29.1621Z"
+                                        fill="#90CAF9" />
+                                    <path d="M24.7068 7.29028H18.6313V1.21484L24.7068 7.29028Z" fill="#E1F5FE" />
+                                    <path
+                                        d="M13.3656 19.6848C13.3656 15.8775 16.2818 16.1206 16.2818 13.8524C16.2818 13.2854 16.1198 12.1513 14.6617 12.1513C13.0416 12.1513 12.9606 13.4474 12.9606 13.7714H10.7734C10.7734 13.2043 11.0165 10.3691 14.6617 10.3691C18.388 10.3691 18.469 13.2854 18.469 13.8524C18.469 16.6876 15.3908 17.0926 15.3908 19.7658H13.3656V19.6848ZM13.2036 22.52C13.2036 22.358 13.2036 21.3049 14.4187 21.3049C15.5528 21.3049 15.6338 22.358 15.6338 22.52C15.6338 22.844 15.4718 23.6541 14.4187 23.6541C13.3656 23.6541 13.2036 22.844 13.2036 22.52Z"
+                                        fill="#1976D2" />
+                                </svg>
+                            </div>
+                            <div class="title">
+                                <h2 class="text-lg sm:text-xl font-bold text-[var(--color-tenth)]/80 ">أسئلة الوحدة
+                                    الرابعة</h2>
+                            </div>
+                        </div>
+                        <div class="left">
+                            <div class="action">
+                                <svg width="22" height="23" viewBox="0 0 22 23" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20.6782 21.2295L2.86963 3.38086" stroke="#51A4DA" stroke-width="2"
+                                        stroke-linecap="round" />
+                                    <path d="M3.82468 11.877L1.36963 1.4541L11.7739 4.56892" stroke="#51A4DA"
+                                        stroke-width="2" stroke-linecap="round" />
+                                </svg>
+                            </div>
+                        </div>
+                    </a>
+                    <a href=""
+                        class="item flex items-center justify-between gap-4 py-3 px-2 hover:bg-[var(--color-primary)]/10 border-b border-[var(--color-ninth)] transition-all duration-300">
+                        <div class="right flex items-center gap-4">
+                            <div class="icon">
+                                <svg width="26" height="33" viewBox="0 0 26 33" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M22.6816 32.4023H0V3.24023H16.2012L22.6816 9.7207V32.4023Z"
+                                        fill="#42A5F5" />
+                                    <path d="M25.9219 29.1621H3.24023V0H19.4414L25.9219 6.48047V29.1621Z"
+                                        fill="#90CAF9" />
+                                    <path d="M24.7068 7.29028H18.6313V1.21484L24.7068 7.29028Z" fill="#E1F5FE" />
+                                    <path
+                                        d="M13.3656 19.6848C13.3656 15.8775 16.2818 16.1206 16.2818 13.8524C16.2818 13.2854 16.1198 12.1513 14.6617 12.1513C13.0416 12.1513 12.9606 13.4474 12.9606 13.7714H10.7734C10.7734 13.2043 11.0165 10.3691 14.6617 10.3691C18.388 10.3691 18.469 13.2854 18.469 13.8524C18.469 16.6876 15.3908 17.0926 15.3908 19.7658H13.3656V19.6848ZM13.2036 22.52C13.2036 22.358 13.2036 21.3049 14.4187 21.3049C15.5528 21.3049 15.6338 22.358 15.6338 22.52C15.6338 22.844 15.4718 23.6541 14.4187 23.6541C13.3656 23.6541 13.2036 22.844 13.2036 22.52Z"
+                                        fill="#1976D2" />
+                                </svg>
+                            </div>
+                            <div class="title">
+                                <h2 class="text-lg sm:text-xl font-bold text-[var(--color-tenth)]/80 ">أسئلة الوحدة
+                                    الخامسة</h2>
+                            </div>
+                        </div>
+                        <div class="left">
+                            <div class="action">
+                                <svg width="22" height="23" viewBox="0 0 22 23" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20.6782 21.2295L2.86963 3.38086" stroke="#51A4DA" stroke-width="2"
+                                        stroke-linecap="round" />
+                                    <path d="M3.82468 11.877L1.36963 1.4541L11.7739 4.56892" stroke="#51A4DA"
+                                        stroke-width="2" stroke-linecap="round" />
+                                </svg>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Center Action Button -->
+                <div class="flex justify-center mt-12 mb-8">
+                    <button id="openImportModal"
+                        class="cursor-pointer bg-[#000] hover:bg-gray-800 text-white font-bold py-3 px-10 rounded-lg flex items-center gap-3 shadow-lg transition-all transform active:scale-95">
+                        <i class="fa-solid fa-download"></i>
+                        استدعاء من بنك الأسئلة
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Import Modal -->
+        <div id="importModal"
+            class="fixed inset-0 bg-[#35394A]/70 z-[100] hidden items-center justify-center p-4 opacity-0 transition-opacity duration-300">
+            <div class="bg-white rounded-xl max-w-2xl w-full shadow-2xl relative transform scale-95 transition-transform duration-300 overflow-hidden"
+                onclick="event.stopPropagation()">
+                <!-- Progress Indicator -->
+                <div class="h-1 w-full bg-gray-100">
+                    <div class="h-full bg-black w-0"></div>
+                </div>
+
+                <!-- Modal Header -->
+                <div class="flex items-center justify-between p-4 border-b border-gray-300">
+                    <h2 class="text-xl font-extrabold">استدعاء من بنك الأسئلة</h2>
+                    <button id="closeImportModal"
+                        class="text-gray-400 hover:text-red-500 transition-colors cursor-pointer">
+                        <i class="fa-solid fa-xmark text-xl"></i>
+                    </button>
+                </div>
+
+                <!-- Modal Body -->
+                <div class="p-6 sm:p-8 space-y-6 max-h-[70vh] overflow-y-auto custom-scrollbar">
+                    <div class="space-y-3">
+                        <label class="block text-sm font-bold">
+                            حدد بنك الأسئلة <span class="text-red-500 font-bold">*</span>
+                        </label>
+                        <div class="relative group">
+                            <select id="select-bank" multiple>
+                                <option value="math">بنك الرياضيات (86 سؤال)</option>
+                                <option value="science">بنك العلوم</option>
+                                <option value="arabic">بنك اللغة العربية</option>
+                            </select>
+                            <div
+                                class="absolute left-4 top-1/2 z-10 -translate-y-1/2 pointer-events-none text-gray-400 group-hover:scale-110 transition-all">
+                                <i class="fa-solid fa-chevron-down text-sm"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between p-4 bg-gray-100 rounded">
+                            <span class="font-bold text-sm">بنك الرياضيات ( 86 سؤال )</span>
+                            <button
+                                class="group w-10 h-10 rounded bg-gray-200 hover:bg-gray-300 flex items-center justify-center transition-all cursor-pointer">
+                                <svg width="20" height="20" viewBox="0 0 28 28" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M3.71376 5.56943L6.63414 23.2092C6.76772 24.0168 7.18365 24.7507 7.80783 25.2802C8.432 25.8097 9.22389 26.1004 10.0424 26.1006H14.6697M23.927 5.56943L21.008 23.2092C20.8744 24.0168 20.4585 24.7507 19.8343 25.2802C19.2102 25.8097 18.4183 26.1004 17.5998 26.1006H12.9725M11.0873 12.3459V19.3241M16.5549 12.3459V19.3241M1.03662 5.56943H26.6055M17.6592 5.56943V3.10929C17.6592 2.55945 17.4408 2.03214 17.052 1.64335C16.6632 1.25455 16.1359 1.03613 15.586 1.03613H12.0561C11.5063 1.03613 10.979 1.25455 10.5902 1.64335C10.2014 2.03214 9.98298 2.55945 9.98298 3.10929V5.56943H17.6592Z"
+                                        stroke="#414141" stroke-width="2.07316" stroke-linecap="round"
+                                        stroke-linejoin="round" class="group-hover:stroke-red-600 transition-all duration-300" />
+                                </svg>
+                            </button>
+                        </div>
+
+                        <div class="flex items-center justify-between p-4 bg-gray-100 rounded">
+                            <span class="font-bold text-sm">بنك أساسيات الحاسب الآلي ( 50 سؤال )</span>
+                            <button
+                                class="group w-10 h-10 rounded bg-gray-200 hover:bg-gray-300 flex items-center justify-center transition-all cursor-pointer">
+                                <svg width="20" height="20" viewBox="0 0 28 28" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M3.71376 5.56943L6.63414 23.2092C6.76772 24.0168 7.18365 24.7507 7.80783 25.2802C8.432 25.8097 9.22389 26.1004 10.0424 26.1006H14.6697M23.927 5.56943L21.008 23.2092C20.8744 24.0168 20.4585 24.7507 19.8343 25.2802C19.2102 25.8097 18.4183 26.1004 17.5998 26.1006H12.9725M11.0873 12.3459V19.3241M16.5549 12.3459V19.3241M1.03662 5.56943H26.6055M17.6592 5.56943V3.10929C17.6592 2.55945 17.4408 2.03214 17.052 1.64335C16.6632 1.25455 16.1359 1.03613 15.586 1.03613H12.0561C11.5063 1.03613 10.979 1.25455 10.5902 1.64335C10.2014 2.03214 9.98298 2.55945 9.98298 3.10929V5.56943H17.6592Z"
+                                        stroke="#414141" stroke-width="2.07316" stroke-linecap="round"
+                                        stroke-linejoin="round" class="group-hover:stroke-red-600 transition-all duration-300" />
+                                </svg>
+                            </button>
+                        </div>
+
+                        <div class="bg-gray-100 rounded p-4">
+                            <div class="flex items-center justify-between mb-6">
+                                <span class="font-bold text-sm">بنك الأسئلة ( جميع المواد )</span>
+                                <button
+                                    class="group w-10 h-10 rounded bg-gray-200 hover:bg-gray-300 flex items-center justify-center transition-all cursor-pointer">
+                                    <svg width="20" height="20" viewBox="0 0 28 28" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M3.71376 5.56943L6.63414 23.2092C6.76772 24.0168 7.18365 24.7507 7.80783 25.2802C8.432 25.8097 9.22389 26.1004 10.0424 26.1006H14.6697M23.927 5.56943L21.008 23.2092C20.8744 24.0168 20.4585 24.7507 19.8343 25.2802C19.2102 25.8097 18.4183 26.1004 17.5998 26.1006H12.9725M11.0873 12.3459V19.3241M16.5549 12.3459V19.3241M1.03662 5.56943H26.6055M17.6592 5.56943V3.10929C17.6592 2.55945 17.4408 2.03214 17.052 1.64335C16.6632 1.25455 16.1359 1.03613 15.586 1.03613H12.0561C11.5063 1.03613 10.979 1.25455 10.5902 1.64335C10.2014 2.03214 9.98298 2.55945 9.98298 3.10929V5.56943H17.6592Z"
+                                            stroke="#414141" stroke-width="2.07316" stroke-linecap="round"
+                                            stroke-linejoin="round" class="group-hover:stroke-red-600 transition-all duration-300" />
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <div class="space-y-4 text-center">
+                                <div
+                                    class="bg-white border border-gray-200 rounded-xl p-3 pr-6 flex items-center justify-between">
+                                    <div class="text-[var(--color-ninth)] text-lg flex items-center gap-2">
+                                        <span class="">15</span>
+                                        <span class="">سؤال</span>
+                                    </div>
+                                    <div class="flex flex-col gap-1 px-4 border-r border-gray-100">
+                                        <button
+                                            class="text-gray-300 hover:text-black transition-colors cursor-pointer"><i
+                                                class="fa-solid fa-chevron-up text-[10px]"></i></button>
+                                        <button
+                                            class="text-gray-300 hover:text-black transition-colors cursor-pointer"><i
+                                                class="fa-solid fa-chevron-down text-[10px]"></i></button>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <input type="checkbox" id="selectAll"
+                                    class="w-5 h-5 rounded border-2 border-gray-200 accent-black transition-all cursor-pointer">
+                                    <label for="selectAll" class="text-sm font-bold text-gray-500 cursor-pointer">تحديد كل
+                                        الأسئلة</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal Footer -->
+                <div class="p-6 bg-white border-t border-gray-50 flex items-center justify-between gap-4">
+                    <button
+                        class="bg-black hover:bg-gray-800 text-white font-extrabold py-3 px-10 rounded flex items-center gap-3 shadow-lg flex-1 sm:flex-none justify-center transition-all transform active:scale-95 cursor-pointer">
+                        <i class="fa-solid fa-download"></i>
+                        استدعاء من بنك الأسئلة
+                    </button>
+                    <button id="cancelImport"
+                        class="bg-gray-100 hover:bg-gray-200 font-extrabold py-3 px-10 rounded transition-all cursor-pointer">
+                        إلغاء
+                    </button>
+                </div>
+            </div>
+        </div>
+    </trainee-layout>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Delay initialization to ensure trainee-layout has finished moving elements
+            setTimeout(() => {
+                const openModalBtn = document.getElementById('openImportModal');
+                const modal = document.getElementById('importModal');
+                const closeModalBtn = document.getElementById('closeImportModal');
+                const cancelBtn = document.getElementById('cancelImport');
+                const modalBox = modal?.querySelector('div');
+
+                function openModal() {
+                    if (modal) {
+                        modal.classList.remove('hidden');
+                        modal.classList.add('flex');
+                        // Small extra delay to ensure display:flex is rendered before starting transition
+                        requestAnimationFrame(() => {
+                            modal.classList.remove('opacity-0');
+                            modal.classList.add('opacity-100');
+                            if (modalBox) {
+                                modalBox.classList.remove('scale-95');
+                                modalBox.classList.add('scale-100');
+                            }
+                        });
+                    }
+                }
+
+                function closeModal() {
+                    if (modal) {
+                        modal.classList.add('opacity-0');
+                        modal.classList.remove('opacity-100');
+                        if (modalBox) {
+                            modalBox.classList.add('scale-95');
+                            modalBox.classList.remove('scale-100');
+                        }
+                        setTimeout(() => {
+                            modal.classList.add('hidden');
+                            modal.classList.remove('flex');
+                        }, 300);
+                    }
+                }
+
+                if (openModalBtn) {
+                    openModalBtn.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        openModal();
+                    });
+                }
+
+                if (closeModalBtn) closeModalBtn.addEventListener('click', closeModal);
+                if (cancelBtn) cancelBtn.addEventListener('click', closeModal);
+
+                if (modal) {
+                    modal.addEventListener('click', (e) => {
+                        if (e.target === modal) closeModal();
+                    });
+                }
+            }, 500); // 500ms should be plenty for trainee-layout to settle
+        });
+
+        new TomSelect("#select-bank", {
+            plugins: ['remove_button'],
+            placeholder: "اختر البنك...",
+        });
+    </script>
 </body>
+
 </html>

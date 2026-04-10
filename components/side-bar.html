@@ -22,7 +22,7 @@
             <div class="bg-[#123F79] h-full overflow-y-auto overflow-x-hidden">
                 <!-- Close button for mobile -->
                 <button id="closeMenu"
-                    class="lg:hidden absolute top-4 left-4 text-white p-2 hover:bg-white/10 rounded-lg z-10">
+                    class="lg:hidden absolute top-4 left-4 text-white p-1 pt-2 hover:bg-white/10 rounded-lg z-10 transition-all duration-300">
                     <i class="fas fa-times text-xl"></i>
                 </button>
 
@@ -51,10 +51,10 @@
                     </a>
 
                     <div class="side-item relative group overflow-visible">
-                        <a href="#" id="myCourses"
-                            class="flex items-center py-4 gap-4 border-b border-[var(--color-fifth)] text-[var(--color-fifth)] hover:text-white hover:border-white group-hover:text-white group-hover:border-white transition">
+                        <div id="myCoursesMenu"
+                            class="cursor-pointer submenu-trigger flex items-center py-4 gap-4 border-b border-[var(--color-fifth)] text-[var(--color-fifth)] hover:text-white hover:border-white group-[.is-open]:text-white group-[.is-open]:border-white transition">
                             <svg width="21" height="23" viewBox="0 0 21 23" fill="none"
-                                class="[&_path]:group-hover:stroke-white [&_path]:transition-all [&_path]:duration-300"
+                                class="[&_path]:group-hover:stroke-white [&_path]:group-[.is-open]:stroke-white [&_path]:transition-all [&_path]:duration-300"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M19.2892 11.3668V17.0258C19.2892 19.1604 19.2892 20.2265 18.6259 20.8898C17.9627 21.553 16.8966 21.553 14.762 21.553H4.00991C3.25948 21.553 2.53979 21.2549 2.00916 20.7243C1.47853 20.1936 1.18042 19.4739 1.18042 18.7235M19.2892 11.3668V5.70785C19.2892 3.57328 19.2892 2.50713 18.6259 1.8439C17.9627 1.18066 16.8966 1.18066 14.762 1.18066H5.70761C3.57304 1.18066 2.50689 1.18066 1.84365 1.8439C1.18042 2.50713 1.18042 3.57328 1.18042 5.70785V18.7235M19.2892 11.3668C19.2892 13.5014 19.2892 14.5676 18.6259 15.2308C17.9627 15.894 16.8966 15.894 14.762 15.894H4.00991C3.25948 15.894 2.53979 16.1921 2.00916 16.7228C1.47853 17.2534 1.18042 17.9731 1.18042 18.7235"
@@ -64,13 +64,17 @@
                             </svg>
                             <span class="text-md xl:text-lg">دوراتي</span>
                             <i
-                                class="fas fa-chevron-left mr-auto text-xs group-hover:-rotate-90 transition-all duration-300"></i>
-                        </a>
+                                class="fas fa-chevron-left mr-auto text-xs group-[.is-open]:-rotate-90 transition-all duration-300"></i>
+                        </div>
 
                         <!-- Submenu Accordion -->
                         <div
-                            class="max-h-0 overflow-hidden group-hover:max-h-[500px] transition-all duration-500 w-full bg-[var(--color-primary)] text-center shadow-inner z-50">
+                            class="max-h-0 overflow-hidden group-[.is-open]:max-h-[500px] transition-all duration-500 w-full bg-[var(--color-primary)] text-center shadow-inner z-50">
                             <div class="p-4 py-2 pb-6 space-y-2">
+                                <a href="#" id="myCourses"
+                                    class="block px-4 py-4 border-b border-[var(--color-fifth)] text-[var(--color-fifth)] hover:border-white hover:text-white  transition text-md duration-300">
+                                    دوراتي
+                                </a>
                                 <a href="#" id="courseAttachments"
                                     class="block px-4 py-4 border-b border-[var(--color-fifth)] text-[var(--color-fifth)] hover:border-white hover:text-white  transition text-md duration-300">
                                     مرفقات الدورة
@@ -92,10 +96,10 @@
                     </div>
 
                     <div class="side-item relative group overflow-visible">
-                        <a href="#" id="recordedLessons"
-                            class="flex items-center py-4 gap-4 border-b border-[var(--color-fifth)] text-[var(--color-fifth)] hover:text-white hover:border-white group-hover:text-white group-hover:border-white transition">
+                        <div id="recordedLessonsMenu"
+                            class="cursor-pointer submenu-trigger flex items-center py-4 gap-4 border-b border-[var(--color-fifth)] text-[var(--color-fifth)] hover:text-white hover:border-white group-[.is-open]:text-white group-[.is-open]:border-white transition">
                             <svg width="26" height="17" viewBox="0 0 26 17" fill="none"
-                                class="[&_path]:group-hover:stroke-white [&_path]:transition-all [&_path]:duration-300"
+                                class="[&_path]:group-hover:stroke-white [&_path]:group-[.is-open]:stroke-white [&_path]:transition-all [&_path]:duration-300"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M4.56653 0.611328C3.51761 0.611328 2.51165 0.95483 1.76995 1.56627C1.02825 2.1777 0.611572 3.00699 0.611572 3.87169V12.566C0.611572 13.4307 1.02825 14.26 1.76995 14.8714C2.51165 15.4829 3.51761 15.8264 4.56653 15.8264H15.1131C16.162 15.8264 17.1679 15.4829 17.9096 14.8714C18.6513 14.26 19.068 13.4307 19.068 12.566V11.4908L22.602 13.7347C23.6716 14.4128 25.2202 13.7846 25.2202 12.6725V3.76519C25.2202 2.65304 23.6716 2.02488 22.602 2.70303L19.068 4.94689V3.87169C19.068 3.00699 18.6513 2.1777 17.9096 1.56627C17.1679 0.95483 16.162 0.611328 15.1131 0.611328H4.56653ZM18.1891 5.67938V12.566C18.1891 13.2385 17.8651 13.8835 17.2882 14.3591C16.7113 14.8347 15.9289 15.1018 15.1131 15.1018H4.56653C3.7507 15.1018 2.96829 14.8347 2.39141 14.3591C1.81454 13.8835 1.49045 13.2385 1.49045 12.566V3.87169C1.49045 3.19915 1.81454 2.55414 2.39141 2.07858C2.96829 1.60302 3.7507 1.33585 4.56653 1.33585H15.1131C15.9289 1.33585 16.7113 1.60302 17.2882 2.07858C17.8651 2.55414 18.1891 3.19915 18.1891 3.87169V5.67938ZM19.068 10.5764V5.86124L23.1381 3.27758C23.2486 3.20733 23.3808 3.16401 23.5197 3.15253C23.6586 3.14105 23.7986 3.16187 23.9238 3.21262C24.0491 3.26338 24.1546 3.34205 24.2284 3.43972C24.3021 3.53738 24.3413 3.65013 24.3413 3.76519V12.6725C24.3413 12.7876 24.3021 12.9003 24.2284 12.998C24.1546 13.0956 24.0491 13.1743 23.9238 13.2251C23.7986 13.2758 23.6586 13.2966 23.5197 13.2852C23.3808 13.2737 23.2486 13.2304 23.1381 13.1601L19.068 10.5764Z"
@@ -103,20 +107,20 @@
                             </svg>
                             <span class="text-md xl:text-lg">دروس مسجلة</span>
                             <i
-                                class="fas fa-chevron-left mr-auto text-xs group-hover:-rotate-90 transition-all duration-300"></i>
-                        </a>
+                                class="fas fa-chevron-left mr-auto text-xs group-[.is-open]:-rotate-90 transition-all duration-300"></i>
+                        </div>
 
                         <!-- Submenu Accordion -->
                         <div
-                            class="max-h-0 overflow-hidden group-hover:max-h-[500px] transition-all duration-500 w-full bg-[var(--color-primary)] text-center shadow-inner z-50">
+                            class="max-h-0 overflow-hidden group-[.is-open]:max-h-[500px] transition-all duration-500 w-full bg-[var(--color-primary)] text-center shadow-inner z-50">
                             <div class="p-4 py-2 pb-6 space-y-2">
+                                <a href="#" id="recordedLessons"
+                                    class="block px-4 py-4 border-b border-[#4772AB] text-[var(--color-fifth)] hover:border-white hover:text-white  transition text-md duration-300">
+                                    دروس مسجلة
+                                </a>
                                 <a href="#" id="liveBroadcast"
                                     class="block px-4 py-4 border-b border-[#4772AB] text-[var(--color-fifth)] hover:border-white hover:text-white  transition text-md duration-300">
                                     بث مباشر
-                                </a>
-                                <a href="#" id="recordedLessons"
-                                    class="block px-4 py-4 border-b border-[#4772AB] text-[var(--color-fifth)] hover:border-white hover:text-white  transition text-md duration-300">
-                                    دورات مسجلة
                                 </a>
                             </div>
                         </div>

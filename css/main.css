@@ -62,6 +62,24 @@ body {
   scrollbar-color: var(--color-primary) #f1f1f1;
 }
 
+.ts-control{
+  padding: 15px !important;
+  border-radius: 10px !important;
+  outline: none !important;
+}
+
+.ts-control input{
+  padding: 15px !important;
+}
+
+.ts-control .item{
+  padding: 5px !important;
+}
+
+.ts-dropdown .option {
+  padding: 15px !important;
+}
+
 
 
 

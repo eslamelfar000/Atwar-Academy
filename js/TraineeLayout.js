@@ -92,16 +92,13 @@ class TraineeLayout extends HTMLElement {
                     // If it's a sub-item, find its parent main item and activate it too
                     const parentSideItem = activeLink.closest('.side-item');
                     if (parentSideItem) {
-                        const mainLink = parentSideItem.querySelector('a');
+                        // The parent could be an 'a' (no submenu) or a 'div' (has submenu)
+                        const mainLink = parentSideItem.firstElementChild;
                         if (mainLink && mainLink !== activeLink) {
                             activateLink(mainLink);
                             
-                            // Optional: Keep the accordion open if a sub-item is active
-                            // const accordion = parentSideItem.querySelector('.max-h-0');
-                            // if (accordion) {
-                            //     accordion.classList.remove('max-h-0');
-                            //     accordion.classList.add('max-h-[500px]');
-                            // }
+                            // Keep the accordion open if a sub-item is active
+                            parentSideItem.classList.add('is-open');
                         }
                     }
                 }
@@ -110,6 +107,21 @@ class TraineeLayout extends HTMLElement {
     }
 
     setupScripts() {
+        // Submenu accordion click functionality
+        const submenuTriggers = this.querySelectorAll('.submenu-trigger');
+        submenuTriggers.forEach(trigger => {
+            trigger.addEventListener('click', () => {
+                const parentItem = trigger.closest('.side-item');
+                if (parentItem) {
+                    // Optional: Close other open submenus (accordion mode)
+                    // const openItems = this.querySelectorAll('.side-item.is-open');
+                    // openItems.forEach(item => { if (item !== parentItem) item.classList.remove('is-open') });
+                    
+                    parentItem.classList.toggle('is-open');
+                }
+            });
+        });
+
         const menuToggle = this.querySelector('#menuToggle');
         const closeMenu = this.querySelector('#closeMenu');
         const sidebar = this.querySelector('#sidebar');

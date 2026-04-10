@@ -1,14 +1,174 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Course Attachments</title>
+    <title>مرفقات الدورة</title>
     <link rel="stylesheet" href="../../css/main.css">
     <link rel="stylesheet" href="../../icons/fontawesome-free-7.2.0-web/fontawesome-free-7.2.0-web/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="../../js/TraineeLayout.js"></script>
 </head>
+
 <body>
-    
+    <trainee-layout active-tab="courseAttachments">
+        <div class="course-attachments">
+            <!-- head -->
+            <div
+                class="head relative mb-4 sm:mb-8 p-2 px-4 md:px-10 text-center bg-[var(--color-forth)] flex items-center justify-between">
+                <div class="flex items-center">
+                    <svg width="25" height="28" viewBox="0 0 25 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M23.1899 13.6651V20.4686C23.1899 23.0348 23.1899 24.3166 22.3926 25.114C21.5952 25.9113 20.3135 25.9113 17.7472 25.9113H4.82066C3.91847 25.9113 3.05323 25.5529 2.41529 24.915C1.77734 24.277 1.41895 23.4118 1.41895 22.5096M23.1899 13.6651V6.8617C23.1899 4.29544 23.1899 3.01367 22.3926 2.21631C21.5952 1.41895 20.3135 1.41895 17.7472 1.41895H6.8617C4.29544 1.41895 3.01367 1.41895 2.21631 2.21631C1.41895 3.01367 1.41895 4.29544 1.41895 6.8617V22.5096M23.1899 13.6651C23.1899 16.2314 23.1899 17.5132 22.3926 18.3105C21.5952 19.1079 20.3135 19.1079 17.7472 19.1079H4.82066C3.91847 19.1079 3.05323 19.4663 2.41529 20.1042C1.77734 20.7422 1.41895 21.6074 1.41895 22.5096"
+                            stroke="#969696" stroke-width="2.83832" />
+                        <path d="M8.22266 8.22363H16.3868" stroke="#969696" stroke-width="2.83832"
+                            stroke-linecap="round" />
+                    </svg>
+
+                    <h1 class="text-xl -mr-2 sm:text-2xl p-6 font-bold text-[var(--color-ninth)] ">
+                        مرفقات الدورة</h1>
+                </div>
+                <!-- Mobile Menu Button -->
+                <button id="menuToggle"
+                    class="lg:hidden text-[var(--color-primary)] cursor-pointer p-1 pt-2 bg-[var(--color-primary)]/10 hover:bg-[var(--color-primary)]/20 rounded-lg transition-all duration-300">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+
+
+
+            <!-- content -->
+            <div class="content p-4 sm:p-6 md:p-8">
+                <div class="items">
+                    <a href=""
+                        class="item flex items-center justify-between hover:bg-[var(--color-primary)]/10 gap-4 py-3 px-2 border-b border-[var(--color-ninth)] transition-all duration-300">
+                        <div class="right flex items-center gap-4">
+                            <div class="icon">
+                                <svg width="28" height="25" viewBox="0 0 28 25" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M0.75 3.59627C0.75 2.84139 1.04987 2.11743 1.58365 1.58365C2.11743 1.04987 2.84139 0.75 3.59627 0.75H6.07965C6.77248 0.750303 7.44141 1.0033 7.96103 1.46157L11.1944 4.30784C11.714 4.76611 12.383 5.01911 13.0758 5.01941H23.5202C24.2751 5.01941 24.999 5.31928 25.5328 5.85306C26.0666 6.38684 26.3665 7.1108 26.3665 7.86568V20.6739C26.3665 21.4288 26.0666 22.1527 25.5328 22.6865C24.999 23.2203 24.2751 23.5202 23.5202 23.5202H3.59627C2.84139 23.5202 2.11743 23.2203 1.58365 22.6865C1.04987 22.1527 0.75 21.4288 0.75 20.6739V3.59627Z"
+                                        stroke="#344054" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <div class="title">
+                                <h2 class="text-lg sm:text-xl font-bold text-[var(--color-tenth)]/80 ">تحميل ملحقات
+                                    الدرس
+                                    الأول
+                                </h2>
+                            </div>
+                        </div>
+                        <div class="left">
+                            <div class="action">
+                                <svg width="22" height="23" viewBox="0 0 22 23" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20.6782 21.2295L2.86963 3.38086" stroke="#51A4DA" stroke-width="2"
+                                        stroke-linecap="round" />
+                                    <path d="M3.82468 11.877L1.36963 1.4541L11.7739 4.56892" stroke="#51A4DA"
+                                        stroke-width="2" stroke-linecap="round" />
+                                </svg>
+                            </div>
+                        </div>
+                    </a>
+                    <a href=""
+                        class="item flex items-center justify-between hover:bg-[var(--color-primary)]/10 gap-4 py-3 px-2 border-b border-[var(--color-ninth)] transition-all duration-300">
+                        <div class="right flex items-center gap-4">
+                            <div class="icon">
+                                <svg width="28" height="25" viewBox="0 0 28 25" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M0.75 3.59627C0.75 2.84139 1.04987 2.11743 1.58365 1.58365C2.11743 1.04987 2.84139 0.75 3.59627 0.75H6.07965C6.77248 0.750303 7.44141 1.0033 7.96103 1.46157L11.1944 4.30784C11.714 4.76611 12.383 5.01911 13.0758 5.01941H23.5202C24.2751 5.01941 24.999 5.31928 25.5328 5.85306C26.0666 6.38684 26.3665 7.1108 26.3665 7.86568V20.6739C26.3665 21.4288 26.0666 22.1527 25.5328 22.6865C24.999 23.2203 24.2751 23.5202 23.5202 23.5202H3.59627C2.84139 23.5202 2.11743 23.2203 1.58365 22.6865C1.04987 22.1527 0.75 21.4288 0.75 20.6739V3.59627Z"
+                                        stroke="#344054" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <div class="title">
+                                <h2 class="text-lg sm:text-xl font-bold text-[var(--color-tenth)]/80 ">تحميل ملحقات
+                                    الدرس
+                                    الثاني
+                                </h2>
+                            </div>
+                        </div>
+                        <div class="left">
+                            <div class="action">
+                                <svg width="22" height="23" viewBox="0 0 22 23" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20.6782 21.2295L2.86963 3.38086" stroke="#51A4DA" stroke-width="2"
+                                        stroke-linecap="round" />
+                                    <path d="M3.82468 11.877L1.36963 1.4541L11.7739 4.56892" stroke="#51A4DA"
+                                        stroke-width="2" stroke-linecap="round" />
+                                </svg>
+                            </div>
+                        </div>
+                    </a>
+                    <a href=""
+                        class="item flex items-center justify-between hover:bg-[var(--color-primary)]/10 gap-4 py-3 px-2 border-b border-[var(--color-ninth)] transition-all duration-300">
+                        <div class="right flex items-center gap-4">
+                            <div class="icon">
+                                <svg width="28" height="25" viewBox="0 0 28 25" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M0.75 3.59627C0.75 2.84139 1.04987 2.11743 1.58365 1.58365C2.11743 1.04987 2.84139 0.75 3.59627 0.75H6.07965C6.77248 0.750303 7.44141 1.0033 7.96103 1.46157L11.1944 4.30784C11.714 4.76611 12.383 5.01911 13.0758 5.01941H23.5202C24.2751 5.01941 24.999 5.31928 25.5328 5.85306C26.0666 6.38684 26.3665 7.1108 26.3665 7.86568V20.6739C26.3665 21.4288 26.0666 22.1527 25.5328 22.6865C24.999 23.2203 24.2751 23.5202 23.5202 23.5202H3.59627C2.84139 23.5202 2.11743 23.2203 1.58365 22.6865C1.04987 22.1527 0.75 21.4288 0.75 20.6739V3.59627Z"
+                                        stroke="#344054" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <div class="title">
+                                <h2 class="text-lg sm:text-xl font-bold text-[var(--color-tenth)]/80 ">تحميل ملحقات
+                                    الدرس
+                                    الثالث
+                                </h2>
+                            </div>
+                        </div>
+                        <div class="left">
+                            <div class="action">
+                                <svg width="22" height="23" viewBox="0 0 22 23" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20.6782 21.2295L2.86963 3.38086" stroke="#51A4DA" stroke-width="2"
+                                        stroke-linecap="round" />
+                                    <path d="M3.82468 11.877L1.36963 1.4541L11.7739 4.56892" stroke="#51A4DA"
+                                        stroke-width="2" stroke-linecap="round" />
+                                </svg>
+                            </div>
+                        </div>
+                    </a>
+                    <a href=""
+                        class="item flex items-center justify-between hover:bg-[var(--color-primary)]/10 gap-4 py-3 px-2 border-b border-[var(--color-ninth)] transition-all duration-300">
+                        <div class="right flex items-center gap-4">
+                            <div class="icon">
+                                <svg width="28" height="25" viewBox="0 0 28 25" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M0.75 3.59627C0.75 2.84139 1.04987 2.11743 1.58365 1.58365C2.11743 1.04987 2.84139 0.75 3.59627 0.75H6.07965C6.77248 0.750303 7.44141 1.0033 7.96103 1.46157L11.1944 4.30784C11.714 4.76611 12.383 5.01911 13.0758 5.01941H23.5202C24.2751 5.01941 24.999 5.31928 25.5328 5.85306C26.0666 6.38684 26.3665 7.1108 26.3665 7.86568V20.6739C26.3665 21.4288 26.0666 22.1527 25.5328 22.6865C24.999 23.2203 24.2751 23.5202 23.5202 23.5202H3.59627C2.84139 23.5202 2.11743 23.2203 1.58365 22.6865C1.04987 22.1527 0.75 21.4288 0.75 20.6739V3.59627Z"
+                                        stroke="#344054" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <div class="title">
+                                <h2 class="text-lg sm:text-xl font-bold text-[var(--color-tenth)]/80 ">تحميل ملحقات
+                                    الدرس
+                                    الرابع
+                                </h2>
+                            </div>
+                        </div>
+                        <div class="left">
+                            <div class="action">
+                                <svg width="22" height="23" viewBox="0 0 22 23" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20.6782 21.2295L2.86963 3.38086" stroke="#51A4DA" stroke-width="2"
+                                        stroke-linecap="round" />
+                                    <path d="M3.82468 11.877L1.36963 1.4541L11.7739 4.56892" stroke="#51A4DA"
+                                        stroke-width="2" stroke-linecap="round" />
+                                </svg>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </trainee-layout>
 </body>
+
 </html>

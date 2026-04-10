@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اختبار الوحدة الأولى</title>
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../icons/fontawesome-free-7.2.0-web/fontawesome-free-7.2.0-web/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="../../js/TraineeLayout.js"></script>
+</head>
+
+<body>
+    <trainee-layout active-tab="myExams">
+        <div class="cover bg-[var(--color-forth)] p-4 sm:p-6 lg:p-8">
+            <div class="bg-white p-4 sm:p-6 lg:p-8 space-y-10">
+                <!-- Exam Header Card -->
+                <div class="overflow-hidden space-y-4">
+                    <div class="flex flex-col sm:flex-row items-center justify-between gap-4 border-2 border-gray-100 p-4 rounded-2xl">
+                        <div class="flex items-center gap-3">
+                            <div>
+                                <h1 class="text-2xl font-bold text-[var(--color-tenth)]">اختبار الوحدة الأولى</h1>
+                            </div>
+                        </div>
+
+                        <!-- Timer Widget -->
+                        <div class="flex items-center gap-2 bg-[var(--color-ninth)]/20 px-6 py-3 rounded-sm">
+                            <i class="fa-regular fa-clock text-[var(--color-tenth)] text-xl"></i>
+                            <div class="text-left font-mono text-xl font-bold text-[var(--color-tenth)] tracking-wider tabular-nums"
+                                id="timer">
+                                29:59
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Progress Section -->
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-sm font-bold text-[var(--color-ninth)]">السؤال <span
+                                    id="currentQuestionNum">1</span>
+                                من 20</span>
+                            <span class="text-sm font-medium text-gray-400">التقدم: <span id="progressPercent">0
+                                    إجابة</span></span>
+                        </div>
+                        <div class="w-full bg-gray-100 h-2.5 rounded-full overflow-hidden">
+                            <div class="bg-black h-full transition-all duration-500" style="width: 5%">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question Card -->
+                <div class="space-y-4 sm:mx-10">
+                    <div class="text-center sm:text-right">
+                        <h2 class="text-xl sm:text-2xl font-bold leading-relaxed">
+                            ماهو التعريف الصحيح للأدارة ؟
+                        </h2>
+                    </div>
+
+                    <!-- Options -->
+                    <div class="grid grid-cols-1 gap-4 flex-1">
+                        <label
+                            class="option-container group relative flex items-center p-4 sm:p-6 border-2 border-gray-100 rounded-2xl cursor-pointer hover:border-[var(--color-third)] hover:bg-blue-50/30 transition-all duration-200">
+                            <input type="radio" name="question1" class="hidden peer">
+                            <div
+                                class="w-7 h-7 sm:w-10 sm:h-10 text-xs sm:text-lg text-center rounded-full border-2 border-gray-200 bg-gray-200 flex items-center justify-center peer-checked:border-[var(--color-third)] peer-checked:bg-[var(--color-third)] transition-all">
+                                أ
+                            </div>
+                            <span class="mr-4 text-sm sm:text-lg font-bold text-[var(--color-tenth)]">عملية تنظيم الموارد لتحقيق الأهداف</span>
+                            <div
+                                class="absolute inset-0 rounded-xl border-2 border-transparent peer-checked:border-[var(--color-third)] pointer-events-none">
+                            </div>
+                        </label>
+
+                        <label
+                            class="option-container group relative flex items-center p-4 sm:p-6 border-2 border-gray-100 rounded-2xl cursor-pointer hover:border-[var(--color-third)] hover:bg-blue-50/30 transition-all duration-200">
+                            <input type="radio" name="question1" class="hidden peer">
+                            <div
+                                class="w-7 h-7 sm:w-10 sm:h-10 text-xs sm:text-lg text-center rounded-full border-2 border-gray-200 bg-gray-200 flex items-center justify-center peer-checked:border-[var(--color-third)] peer-checked:bg-[var(--color-third)] transition-all">
+                                ب
+                            </div>
+                            <span class="mr-4 text-sm sm:text-lg font-bold text-[var(--color-tenth)]">عملية بيع المنتجات</span>
+                            <div
+                                class="absolute inset-0 rounded-xl border-2 border-transparent peer-checked:border-[var(--color-third)] pointer-events-none">
+                            </div>
+                        </label>
+
+                        <label
+                            class="option-container group relative flex items-center p-4 sm:p-6 border-2 border-gray-100 rounded-2xl cursor-pointer hover:border-[var(--color-third)] hover:bg-blue-50/30 transition-all duration-200">
+                            <input type="radio" name="question1" class="hidden peer">
+                            <div
+                                class="w-7 h-7 sm:w-10 sm:h-10 text-xs sm:text-lg text-center rounded-full border-2 border-gray-200 bg-gray-200 flex items-center justify-center peer-checked:border-[var(--color-third)] peer-checked:bg-[var(--color-third)] transition-all">
+                                ج
+                            </div>
+                            <span class="mr-4 text-sm sm:text-lg font-bold text-[var(--color-tenth)]">عملية تصنيع السلع</span>
+                            <div
+                                class="absolute inset-0 rounded-xl border-2 border-transparent peer-checked:border-[var(--color-third)] pointer-events-none">
+                            </div>
+                        </label>
+
+                        <label
+                            class="option-container group relative flex items-center p-4 sm:p-6 border-2 border-gray-100 rounded-2xl cursor-pointer hover:border-[var(--color-third)] hover:bg-blue-50/30 transition-all duration-200">
+                            <input type="radio" name="question1" class="hidden peer">
+                            <div
+                                class="w-7 h-7 sm:w-10 sm:h-10 text-xs sm:text-lg text-center rounded-full border-2 border-gray-200 bg-gray-200 flex items-center justify-center peer-checked:border-[var(--color-third)] peer-checked:bg-[var(--color-third)] transition-all">
+                                د
+                            </div>
+                            <span class="mr-4 text-sm sm:text-lg font-bold text-[var(--color-tenth)]">عملية نقل البضائع</span>
+                            <div
+                                class="absolute inset-0 rounded-xl border-2 border-transparent peer-checked:border-[var(--color-third)] pointer-events-none">
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Footer Actions -->
+                <div class="flex items-center justify-between gap-4">
+                    <button
+                        class="flex-1 sm:flex-none sm:min-w-[160px] cursor-pointer bg-white border-2 border-gray-200 text-[var(--color-tenth)] font-bold py-2 sm:py-4 px-4 sm:px-8 rounded-lg not-disabled:hover:bg-[var(--color-third)] not-disabled:hover:border-[var(--color-third)] not-disabled:hover:text-white transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                        disabled>
+                        <i class="fa-solid fa-chevron-right ml-2 text-sm"></i>
+                        السابق
+                    </button>
+
+                    <button
+                        class="flex-1 sm:flex-none sm:min-w-[200px] cursor-pointer bg-[var(--color-third)] hover:bg-[var(--color-tenth)] text-white font-bold py-2.5 sm:py-4 px-4 sm:px-8 rounded-lg shadow-lg shadow-blue-200 transform active:scale-95 transition-all">
+                        التالي
+                        <i class="fa-solid fa-chevron-left mr-2 text-sm"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </trainee-layout>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Timer Logic
+            let timeLeft = 30 * 60; // 30 minutes in seconds
+            const timerElement = document.getElementById('timer');
+
+            function updateTimer() {
+                const minutes = Math.floor(timeLeft / 60);
+                const seconds = timeLeft % 60;
+                timerElement.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+
+                if (timeLeft > 0) {
+                    timeLeft--;
+                } else {
+                    clearInterval(timerInterval);
+                    alert('انتهى الوقت!');
+                }
+            }
+
+            const timerInterval = setInterval(updateTimer, 1000);
+            updateTimer();
+        });
+    </script>
+</body>
+
+</html>
