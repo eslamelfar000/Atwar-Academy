@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تواصل مع المدرب</title>
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../icons/fontawesome-free-7.2.0-web/fontawesome-free-7.2.0-web/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="../../js/TraineeLayout.js"></script>
+</head>
+
+<body>
+    <!-- استخدام المكون الجديد هنا، وهو سيقوم تلقائيا بجلب القائمة الجانبية والهيدر -->
+    <trainee-layout active-tab="talkToInstructor">
+        <!-- Left Side - Form -->
+        <div class="w-full">
+            <!-- head -->
+            <div
+                class="head relative mb-4 sm:mb-8 p-2 px-4 md:px-10 text-center bg-[var(--color-forth)] flex items-center justify-between">
+                <div class="flex items-center">
+                    <svg width="25" height="28" viewBox="0 0 25 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M23.1899 13.6651V20.4686C23.1899 23.0348 23.1899 24.3166 22.3926 25.114C21.5952 25.9113 20.3135 25.9113 17.7472 25.9113H4.82066C3.91847 25.9113 3.05323 25.5529 2.41529 24.915C1.77734 24.277 1.41895 23.4118 1.41895 22.5096M23.1899 13.6651V6.8617C23.1899 4.29544 23.1899 3.01367 22.3926 2.21631C21.5952 1.41895 20.3135 1.41895 17.7472 1.41895H6.8617C4.29544 1.41895 3.01367 1.41895 2.21631 2.21631C1.41895 3.01367 1.41895 4.29544 1.41895 6.8617V22.5096M23.1899 13.6651C23.1899 16.2314 23.1899 17.5132 22.3926 18.3105C21.5952 19.1079 20.3135 19.1079 17.7472 19.1079H4.82066C3.91847 19.1079 3.05323 19.4663 2.41529 20.1042C1.77734 20.7422 1.41895 21.6074 1.41895 22.5096"
+                            stroke="#969696" stroke-width="2.83832" />
+                        <path d="M8.22266 8.22363H16.3868" stroke="#969696" stroke-width="2.83832"
+                            stroke-linecap="round" />
+                    </svg>
+
+                    <h1 class="text-xl -mr-2 sm:text-2xl p-6 font-bold text-[var(--color-ninth)] ">
+                        تواصل مع المدرب</h1>
+                </div>
+                <!-- Mobile Menu Button -->
+                <button id="menuToggle"
+                    class="lg:hidden text-[var(--color-primary)] cursor-pointer p-1 pt-2 bg-[var(--color-primary)]/10 hover:bg-[var(--color-primary)]/20 rounded-lg transition-all duration-300">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+
+            </div>
+
+
+            <!-- content -->
+            <div class="w-full p-6 space-y-10">
+                <div class="chats-head sticky top-2 bg-[var(--color-primary)] p-1 px-8">
+                    <div class="flex items-center gap-2">
+                        <div class="icon">
+                            <svg width="30" height="30" viewBox="0 0 30 27" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M11.9648 19.2812C11.9885 19.2812 12.0116 19.2909 12.0283 19.3076C12.045 19.3243 12.0537 19.3475 12.0537 19.3711V21.1689C12.0538 21.7972 12.5641 22.3066 13.1924 22.3066H19.9414C19.9657 22.3066 19.9873 22.3164 20.002 22.3311L20.0039 22.333L23.3418 25.6699L23.8223 26.1504C23.8136 26.1489 23.8045 26.1492 23.7959 26.1475C23.6105 26.1106 23.4404 26.0194 23.3066 25.8857L20.1475 22.7285L19.9043 22.4854H13.1924C12.8434 22.4854 12.5086 22.3463 12.2617 22.0996C12.0149 21.8528 11.876 21.518 11.876 21.1689V19.3711C11.876 19.3474 11.8856 19.3243 11.9023 19.3076L11.9014 19.3066C11.918 19.2902 11.9414 19.2813 11.9648 19.2812ZM23.0098 8.19434H27.3047C28.0311 8.19439 28.6211 8.78437 28.6211 9.51074V21.1689C28.621 21.518 28.4822 21.8528 28.2354 22.0996C27.9885 22.3464 27.6538 22.4853 27.3047 22.4854H24.9395V25.21C24.9393 25.399 24.8834 25.5841 24.7783 25.7412C24.773 25.7491 24.7662 25.7559 24.7607 25.7637V22.3955C24.7608 22.372 24.7706 22.3496 24.7871 22.333C24.8038 22.3163 24.8269 22.3066 24.8506 22.3066H27.3047C27.6064 22.3066 27.896 22.187 28.1094 21.9736C28.3227 21.7603 28.4423 21.4707 28.4424 21.1689V9.51074C28.4424 9.24652 28.3507 8.99162 28.1846 8.78906L28.1094 8.70605L28.0254 8.62988C27.823 8.46423 27.5685 8.37307 27.3047 8.37305H23.0098C22.9861 8.37305 22.963 8.36339 22.9463 8.34668C22.9296 8.32995 22.9199 8.30686 22.9199 8.2832C22.92 8.25973 22.9298 8.23736 22.9463 8.2207C22.963 8.20397 22.9861 8.19434 23.0098 8.19434ZM2.14746 0.831055H17.4873C18.2149 0.831104 18.8037 1.4199 18.8037 2.14746V13.8057C18.8037 14.1548 18.6648 14.4895 18.418 14.7363C18.1711 14.9832 17.8364 15.122 17.4873 15.1221H9.54785L9.30469 15.3652L6.14551 18.5225C6.01175 18.6562 5.84171 18.7473 5.65625 18.7842C5.64734 18.786 5.63784 18.7856 5.62891 18.7871L6.11035 18.3066L9.44824 14.9707V14.9697C9.45669 14.9613 9.46669 14.9546 9.47754 14.9502L9.51172 14.9434H17.4873C17.7891 14.9433 18.0786 14.8237 18.292 14.6104C18.5054 14.3969 18.625 14.1074 18.625 13.8057V2.14746C18.625 1.88346 18.533 1.62922 18.3672 1.42676L18.292 1.34277L18.208 1.26758C18.0056 1.10173 17.7513 1.00979 17.4873 1.00977H2.14746C1.84569 1.00979 1.55616 1.12939 1.34277 1.34277C1.12939 1.55616 1.00979 1.84569 1.00977 2.14746V13.8057C1.00977 14.434 1.51911 14.9433 2.14746 14.9434H4.60156C4.62522 14.9434 4.64831 14.953 4.66504 14.9697C4.68177 14.9865 4.69141 15.0095 4.69141 15.0332V18.4004C4.68592 18.3927 4.6791 18.3858 4.67383 18.3779C4.56876 18.2207 4.5128 18.0358 4.5127 17.8467V15.1221H2.14746C1.79837 15.122 1.46364 14.9832 1.2168 14.7363C0.969967 14.4895 0.831055 14.1548 0.831055 13.8057V2.14746C0.831104 1.42021 1.42082 0.831104 2.14746 0.831055ZM13.1924 4.82031C13.2038 4.82035 13.215 4.8228 13.2256 4.82715C13.2363 4.83158 13.2467 4.83752 13.2549 4.8457C13.2631 4.85393 13.27 4.86425 13.2744 4.875C13.2788 4.88566 13.2803 4.89767 13.2803 4.90918C13.2802 4.92053 13.2787 4.93187 13.2744 4.94238C13.27 4.95314 13.2631 4.96345 13.2549 4.97168L7.11914 11.1074C7.11091 11.1157 7.1006 11.1215 7.08984 11.126C7.07924 11.1304 7.0681 11.1328 7.05664 11.1328C7.045 11.1328 7.03322 11.1304 7.02246 11.126C7.01173 11.1215 7.00138 11.1156 6.99316 11.1074C6.98498 11.0992 6.97904 11.0888 6.97461 11.0781C6.97026 11.0675 6.96782 11.0564 6.96777 11.0449C6.96777 11.0333 6.97015 11.0215 6.97461 11.0107C6.97906 11 6.98493 10.9897 6.99316 10.9814L13.1299 4.8457C13.138 4.83768 13.1477 4.83153 13.1582 4.82715C13.169 4.82269 13.1807 4.82031 13.1924 4.82031Z"
+                                    fill="white" stroke="white" stroke-width="1.66235" />
+                            </svg>
+                        </div>
+                        <div class="info">
+                            <h1 class="text-lg sm:text-2xl p-4 font-bold text-white ">
+                                تواصل مع المدرب</h1>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chats space-y-4">
+                    <a href="" class="items flex gap-4 justify-between border border-[var(--color-ninth)] p-3 px-4">
+                        <div class="user-info flex items-center gap-4">
+                            <div class="user-img">
+                                <img src="../../images/user-img.png" alt="">
+                            </div>
+                            <div class="user-data">
+                                <h2 class="text-lg sm:text-xl font-bold text-[var(--color-ninth)]">اسم المدرب</h2>
+                                <p class="text-sm sm:text-base text-[var(--color-ninth)]/80">اسم الدورة</p>
+                            </div>
+                        </div>
+                        <div class="date">
+                            <p class="text-sm sm:text-base text-[var(--color-ninth)]">10-10-2022</p>
+                        </div>
+                    </a>
+                    <a href="" class="items flex gap-4 justify-between border border-[var(--color-ninth)] p-3 px-4">
+                        <div class="user-info flex items-center gap-4">
+                            <div class="user-img">
+                                <img src="../../images/user-img.png" alt="">
+                            </div>
+                            <div class="user-data">
+                                <h2 class="text-lg sm:text-xl font-bold text-[var(--color-ninth)]">اسم المدرب</h2>
+                                <p class="text-sm sm:text-base text-[var(--color-ninth)]/80">اسم الدورة</p>
+                            </div>
+                        </div>
+                        <div class="date">
+                            <p class="text-sm sm:text-base text-[var(--color-ninth)]">10-10-2022</p>
+                        </div>
+                    </a>
+                    <a href="" class="items flex gap-4 justify-between border border-[var(--color-ninth)] p-3 px-4">
+                        <div class="user-info flex items-center gap-4">
+                            <div class="user-img">
+                                <img src="../../images/user-img.png" alt="">
+                            </div>
+                            <div class="user-data">
+                                <h2 class="text-lg sm:text-xl font-bold text-[var(--color-ninth)]">اسم المدرب</h2>
+                                <p class="text-sm sm:text-base text-[var(--color-ninth)]/80">اسم الدورة</p>
+                            </div>
+                        </div>
+                        <div class="date">
+                            <p class="text-sm sm:text-base text-[var(--color-ninth)]">10-10-2022</p>
+                        </div>
+                    </a>
+                    <a href="" class="items flex gap-4 justify-between border border-[var(--color-ninth)] p-3 px-4">
+                        <div class="user-info flex items-center gap-4">
+                            <div class="user-img">
+                                <img src="../../images/user-img.png" alt="">
+                            </div>
+                            <div class="user-data">
+                                <h2 class="text-lg sm:text-xl font-bold text-[var(--color-ninth)]">اسم المدرب</h2>
+                                <p class="text-sm sm:text-base text-[var(--color-ninth)]/80">اسم الدورة</p>
+                            </div>
+                        </div>
+                        <div class="date">
+                            <p class="text-sm sm:text-base text-[var(--color-ninth)]">10-10-2022</p>
+                        </div>
+                    </a>
+                    <a href="" class="items flex gap-4 justify-between border border-[var(--color-ninth)] p-3 px-4">
+                        <div class="user-info flex items-center gap-4">
+                            <div class="user-img">
+                                <img src="../../images/user-img.png" alt="">
+                            </div>
+                            <div class="user-data">
+                                <h2 class="text-lg sm:text-xl font-bold text-[var(--color-ninth)]">اسم المدرب</h2>
+                                <p class="text-sm sm:text-base text-[var(--color-ninth)]/80">اسم الدورة</p>
+                            </div>
+                        </div>
+                        <div class="date">
+                            <p class="text-sm sm:text-base text-[var(--color-ninth)]">10-10-2022</p>
+                        </div>
+                    </a>
+                    <a href="" class="items flex gap-4 justify-between border border-[var(--color-ninth)] p-3 px-4">
+                        <div class="user-info flex items-center gap-4">
+                            <div class="user-img">
+                                <img src="../../images/user-img.png" alt="">
+                            </div>
+                            <div class="user-data">
+                                <h2 class="text-lg sm:text-xl font-bold text-[var(--color-ninth)]">اسم المدرب</h2>
+                                <p class="text-sm sm:text-base text-[var(--color-ninth)]/80">اسم الدورة</p>
+                            </div>
+                        </div>
+                        <div class="date">
+                            <p class="text-sm sm:text-base text-[var(--color-ninth)]">10-10-2022</p>
+                        </div>
+                    </a>
+                    <a href="" class="items flex gap-4 justify-between border border-[var(--color-ninth)] p-3 px-4">
+                        <div class="user-info flex items-center gap-4">
+                            <div class="user-img">
+                                <img src="../../images/user-img.png" alt="">
+                            </div>
+                            <div class="user-data">
+                                <h2 class="text-lg sm:text-xl font-bold text-[var(--color-ninth)]">اسم المدرب</h2>
+                                <p class="text-sm sm:text-base text-[var(--color-ninth)]/80">اسم الدورة</p>
+                            </div>
+                        </div>
+                        <div class="date">
+                            <p class="text-sm sm:text-base text-[var(--color-ninth)]">10-10-2022</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </trainee-layout>
+</body>
+
+</html>
