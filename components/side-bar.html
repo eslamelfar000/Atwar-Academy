@@ -34,21 +34,53 @@
 
                 <!-- Navigation Menu -->
                 <nav class="p-10 lg:p-4 xl:p-10">
-                    <a href="#" id="overview"
+                    <a href="/pages/TraineeProfilePages/AccountSettings.html" id="overview"
                         class="w-full flex justify-center mb-4 xl:mb-8 text-center px-8 py-2 gap-4 text-[var(--color-fifth)] border border-[var(--color-fifth)] hover:text-white hover:border-white transition">
                         <span class="text-md xl:text-lg">إعدادات الحساب</span>
                     </a>
 
-                    <a href="#" id="trainingPlan"
-                        class="flex items-center py-4 group gap-4 border-b border-[var(--color-fifth)] text-[var(--color-fifth)] hover:text-white hover:border-white transition">
-                        <svg width="25" height="22" viewBox="0 0 25 22" fill="none" xmlns="http://www.w3.org/2000/svg"
-                            class="[&_path]:group-hover:stroke-white [&_path]:transition-all [&_path]:duration-300">
-                            <path
-                                d="M23.8972 6.7168L12.5327 0.655776C12.4779 0.626592 12.4168 0.611328 12.3547 0.611328C12.2926 0.611328 12.2315 0.626592 12.1766 0.655776L0.812225 6.7168C0.751617 6.7491 0.70093 6.79727 0.665586 6.85616C0.630243 6.91504 0.611572 6.98243 0.611572 7.0511C0.611572 7.11978 0.630243 7.18717 0.665586 7.24605C0.70093 7.30494 0.751617 7.35311 0.812225 7.38541L3.64197 8.89498V13.7078C3.6398 13.9868 3.74101 14.2567 3.92608 14.4654C5.12408 15.7998 7.80892 18.0386 12.3547 18.0386C14.3435 18.0386 15.9724 17.6105 17.2793 17.0168V20.6884C17.2793 20.7889 17.3192 20.8852 17.3902 20.9563C17.4613 21.0273 17.5576 21.0672 17.6581 21.0672C17.7586 21.0672 17.8549 21.0273 17.926 20.9563C17.997 20.8852 18.0369 20.7889 18.0369 20.6884V16.6332C19.0666 16.0676 19.9948 15.3344 20.7833 14.4635C20.9682 14.2547 21.0694 13.9849 21.0674 13.7059V8.89498L23.8972 7.38541C23.9578 7.35311 24.0085 7.30494 24.0438 7.24605C24.0791 7.18717 24.0978 7.11978 24.0978 7.0511C24.0978 6.98243 24.0791 6.91504 24.0438 6.85616C24.0085 6.79727 23.9578 6.7491 23.8972 6.7168ZM12.3547 17.2791C8.10913 17.2791 5.60706 15.1956 4.4943 13.9569C4.433 13.8884 4.39925 13.7997 4.39959 13.7078V9.29842L12.1766 13.4464C12.2315 13.4756 12.2926 13.4909 12.3547 13.4909C12.4168 13.4909 12.4779 13.4756 12.5327 13.4464L17.2793 10.915V16.1739C16.0084 16.8056 14.3804 17.2791 12.3547 17.2791ZM20.3098 13.7078C20.3097 13.7999 20.276 13.8888 20.2151 13.9578C19.5799 14.6599 18.8462 15.266 18.0369 15.7572V10.5106L20.3098 9.29842V13.7078ZM17.981 9.68197C17.9457 9.62441 17.8957 9.57733 17.8361 9.5456L12.5327 6.7168C12.4443 6.67161 12.3416 6.66299 12.2468 6.69278C12.152 6.72257 12.0728 6.7884 12.0261 6.87609C11.9794 6.96377 11.969 7.06629 11.9972 7.16156C12.0253 7.25682 12.0898 7.33721 12.1766 7.38541L17.2319 10.0816L12.3547 12.6831L1.79525 7.0511L12.3547 1.41909L22.9141 7.0511L17.981 9.68197Z"
-                                fill="white" stroke="#51A4DA" stroke-width="1.22325" />
-                        </svg>
-                        <span class="text-md xl:text-lg">الخطة التدريبية</span>
-                    </a>
+                    <div class="side-item relative group overflow-visible">
+                        <div id="trainingPlanMenu"
+                            class="cursor-pointer submenu-trigger flex items-center py-4 gap-4 border-b border-[var(--color-fifth)] text-[var(--color-fifth)] hover:text-white hover:border-white group-[.is-open]:text-white group-[.is-open]:border-white transition">
+                            <svg width="25" height="22" viewBox="0 0 25 22" fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="[&_path]:group-hover:stroke-white [&_path]:transition-all [&_path]:duration-300">
+                                <path
+                                    d="M23.8972 6.7168L12.5327 0.655776C12.4779 0.626592 12.4168 0.611328 12.3547 0.611328C12.2926 0.611328 12.2315 0.626592 12.1766 0.655776L0.812225 6.7168C0.751617 6.7491 0.70093 6.79727 0.665586 6.85616C0.630243 6.91504 0.611572 6.98243 0.611572 7.0511C0.611572 7.11978 0.630243 7.18717 0.665586 7.24605C0.70093 7.30494 0.751617 7.35311 0.812225 7.38541L3.64197 8.89498V13.7078C3.6398 13.9868 3.74101 14.2567 3.92608 14.4654C5.12408 15.7998 7.80892 18.0386 12.3547 18.0386C14.3435 18.0386 15.9724 17.6105 17.2793 17.0168V20.6884C17.2793 20.7889 17.3192 20.8852 17.3902 20.9563C17.4613 21.0273 17.5576 21.0672 17.6581 21.0672C17.7586 21.0672 17.8549 21.0273 17.926 20.9563C17.997 20.8852 18.0369 20.7889 18.0369 20.6884V16.6332C19.0666 16.0676 19.9948 15.3344 20.7833 14.4635C20.9682 14.2547 21.0694 13.9849 21.0674 13.7059V8.89498L23.8972 7.38541C23.9578 7.35311 24.0085 7.30494 24.0438 7.24605C24.0791 7.18717 24.0978 7.11978 24.0978 7.0511C24.0978 6.98243 24.0791 6.91504 24.0438 6.85616C24.0085 6.79727 23.9578 6.7491 23.8972 6.7168ZM12.3547 17.2791C8.10913 17.2791 5.60706 15.1956 4.4943 13.9569C4.433 13.8884 4.39925 13.7997 4.39959 13.7078V9.29842L12.1766 13.4464C12.2315 13.4756 12.2926 13.4909 12.3547 13.4909C12.4168 13.4909 12.4779 13.4756 12.5327 13.4464L17.2793 10.915V16.1739C16.0084 16.8056 14.3804 17.2791 12.3547 17.2791ZM20.3098 13.7078C20.3097 13.7999 20.276 13.8888 20.2151 13.9578C19.5799 14.6599 18.8462 15.266 18.0369 15.7572V10.5106L20.3098 9.29842V13.7078ZM17.981 9.68197C17.9457 9.62441 17.8957 9.57733 17.8361 9.5456L12.5327 6.7168C12.4443 6.67161 12.3416 6.66299 12.2468 6.69278C12.152 6.72257 12.0728 6.7884 12.0261 6.87609C11.9794 6.96377 11.969 7.06629 11.9972 7.16156C12.0253 7.25682 12.0898 7.33721 12.1766 7.38541L17.2319 10.0816L12.3547 12.6831L1.79525 7.0511L12.3547 1.41909L22.9141 7.0511L17.981 9.68197Z"
+                                    fill="white" stroke="#51A4DA" stroke-width="1.22325" />
+                            </svg>
+                            <span class="text-md xl:text-lg">الخطة التدريبية</span>
+                            <i
+                                class="fas fa-chevron-left mr-auto text-xs group-[.is-open]:-rotate-90 transition-all duration-300"></i>
+
+                        </div>
+
+                        <!-- Submenu Accordion -->
+                        <div
+                            class="max-h-0 overflow-hidden group-[.is-open]:max-h-[500px] transition-all duration-500 w-full bg-[var(--color-primary)] text-center shadow-inner z-50">
+                            <div class="p-4 py-2 pb-6 space-y-2">
+                                <a href="/pages/TraineeProfilePages/TrainingPlan.html" id="trainingPlan"
+                                    class="block px-4 py-4 border-b border-[var(--color-fifth)] text-[var(--color-fifth)] hover:border-white hover:text-white  transition text-md duration-300">
+                                    الخطة التدريبية
+                                </a>
+                                <a href="/pages/TraineeProfilePages/Coursework.html" id="coursework"
+                                    class="block px-4 py-4 border-b border-[var(--color-fifth)] text-[var(--color-fifth)] hover:border-white hover:text-white  transition text-md duration-300">
+                                    المقررات الدراسية
+                                </a>
+                                <a href="#" id="previousRequirements"
+                                    class="block px-4 py-4 border-b border-[var(--color-fifth)] text-[var(--color-fifth)] hover:border-white hover:text-white  transition text-md duration-300">
+                                    المتطلبات السابقة </a>
+                                <a href="#" id="evaluationMechanism"
+                                    class="block px-4 py-4 border-b border-[var(--color-fifth)] text-[var(--color-fifth)] hover:border-white hover:text-white  transition text-md duration-300">
+                                    آلية التقييم
+                                </a>
+                                <a href="#" id="trainingPlan"
+                                    class="block px-4 py-4 border-b border-[var(--color-fifth)] text-[var(--color-fifth)] hover:border-white hover:text-white  transition text-md duration-300">
+                                    خطة التدريبية
+                                </a>
+                            </div>
+                        </div>
+                    </div>
 
                     <div class="side-item relative group overflow-visible">
                         <div id="myCoursesMenu"
@@ -71,23 +103,23 @@
                         <div
                             class="max-h-0 overflow-hidden group-[.is-open]:max-h-[500px] transition-all duration-500 w-full bg-[var(--color-primary)] text-center shadow-inner z-50">
                             <div class="p-4 py-2 pb-6 space-y-2">
-                                <a href="#" id="myCourses"
+                                <a href="/pages/TraineeProfilePages/MyCourses.html" id="myCourses"
                                     class="block px-4 py-4 border-b border-[var(--color-fifth)] text-[var(--color-fifth)] hover:border-white hover:text-white  transition text-md duration-300">
                                     دوراتي
                                 </a>
-                                <a href="#" id="courseAttachments"
+                                <a href="/pages/TraineeProfilePages/CourseAttachments.html" id="courseAttachments"
                                     class="block px-4 py-4 border-b border-[var(--color-fifth)] text-[var(--color-fifth)] hover:border-white hover:text-white  transition text-md duration-300">
                                     مرفقات الدورة
                                 </a>
-                                <a href="#" id="questionBank"
+                                <a href="/pages/TraineeProfilePages/QuestionsBanks.html" id="questionBank"
                                     class="block px-4 py-4 border-b border-[var(--color-fifth)] text-[var(--color-fifth)] hover:border-white hover:text-white  transition text-md duration-300">
                                     بنك الأسئلة
                                 </a>
-                                <a href="#" id="examResults"
+                                <a href="/pages/TraineeProfilePages/ExamsResults.html" id="examResults"
                                     class="block px-4 py-4 border-b border-[var(--color-fifth)] text-[var(--color-fifth)] hover:border-white hover:text-white  transition text-md duration-300">
                                     نتيجة أختباراتي
                                 </a>
-                                <a href="#" id="talkToInstructor"
+                                <a href="/pages/TraineeProfilePages/ContactWithTrainer.html" id="talkToInstructor"
                                     class="block px-4 py-4 border-b border-[var(--color-fifth)] text-[var(--color-fifth)] hover:border-white hover:text-white  transition text-md duration-300">
                                     التحدث مع المدرب
                                 </a>
@@ -114,20 +146,20 @@
                         <div
                             class="max-h-0 overflow-hidden group-[.is-open]:max-h-[500px] transition-all duration-500 w-full bg-[var(--color-primary)] text-center shadow-inner z-50">
                             <div class="p-4 py-2 pb-6 space-y-2">
-                                <a href="#" id="recordedLessons"
-                                    class="block px-4 py-4 border-b border-[#4772AB] text-[var(--color-fifth)] hover:border-white hover:text-white  transition text-md duration-300">
-                                    دروس مسجلة
-                                </a>
-                                <a href="#" id="liveBroadcast"
+                                <a href="/pages/TraineeProfilePages/LiveStream.html" id="liveStream"
                                     class="block px-4 py-4 border-b border-[#4772AB] text-[var(--color-fifth)] hover:border-white hover:text-white  transition text-md duration-300">
                                     بث مباشر
+                                </a>
+                                <a href="/pages/TraineeProfilePages/RecordedCourses.html" id="recordedCourses"
+                                    class="block px-4 py-4 border-b border-[#4772AB] text-[var(--color-fifth)] hover:border-white hover:text-white  transition text-md duration-300">
+                                    دورات مسجلة
                                 </a>
                             </div>
                         </div>
                     </div>
 
                     <div class="side-item">
-                        <a href="#" id="myExams"
+                        <a href="/pages/TraineeProfilePages/ExamsResults.html" id="myExams"
                             class="flex items-center py-4 group gap-4 border-b border-[var(--color-fifth)] text-[var(--color-fifth)] hover:text-white hover:border-white transition">
                             <svg width="19" height="19" viewBox="0 0 19 19" fill="none"
                                 class="[&_path]:group-hover:stroke-white [&_path]:transition-all [&_path]:duration-300"
@@ -167,7 +199,7 @@
                     </div>
 
                     <div class="side-item">
-                        <a href="#" id="academicCalendar"
+                        <a href="/pages/TraineeProfilePages/AcademicCalendar.html" id="academicCalendar"
                             class="flex items-center py-4 group gap-4 border-b border-[var(--color-fifth)] text-[var(--color-fifth)] hover:text-white hover:border-white transition">
                             <img src="../../images/calendar.png" alt=""
                                 class="group-hover:brightness-0 group-hover:invert transition-all duration-300">
@@ -176,7 +208,7 @@
                     </div>
 
                     <div class="side-item">
-                        <a href="#" id="discussions"
+                        <a href="/pages/TraineeProfilePages/Discussions.html" id="discussions"
                             class="flex items-center py-4 group gap-4 border-b border-[var(--color-fifth)] text-[var(--color-fifth)] hover:text-white hover:border-white transition">
                             <svg width="22" height="20" viewBox="0 0 22 20" fill="none"
                                 class="[&_path]:group-hover:stroke-white [&_path]:transition-all [&_path]:duration-300"
@@ -190,7 +222,7 @@
                     </div>
 
                     <div class="side-item">
-                        <a href="#" id="myAssignments"
+                        <a href="/pages/TraineeProfilePages/MyHomewroks.html" id="myHomewroks"
                             class="flex items-center py-4 group gap-4 border-b border-[var(--color-fifth)] text-[var(--color-fifth)] hover:text-white hover:border-white transition">
                             <img src="../../images/laptop.png" alt=""
                                 class="group-hover:brightness-0 group-hover:invert transition-all duration-300">
@@ -199,7 +231,7 @@
                     </div>
 
                     <div class="side-item">
-                        <a href="#" id="myGrades"
+                        <a href="/pages/TraineeProfilePages/MyGrades.html" id="myGrades"
                             class="flex items-center py-4 group gap-4 border-b border-[var(--color-fifth)] text-[var(--color-fifth)] hover:text-white hover:border-white transition">
                             <svg width="27" height="16" viewBox="0 0 27 16" fill="none"
                                 class="[&_path]:group-hover:fill-white [&_path]:transition-all [&_path]:duration-300"
@@ -216,7 +248,7 @@
                     </div>
 
                     <div class="side-item">
-                        <a href="#" id="myCertificates"
+                        <a href="/pages/TraineeProfilePages/MyCertificates.html" id="myCertificates"
                             class="flex items-center py-4 group gap-4 border-b border-[var(--color-fifth)] text-[var(--color-fifth)] hover:text-white hover:border-white transition">
                             <svg width="19" height="26" viewBox="0 0 19 26" fill="none"
                                 class="[&_path]:group-hover:stroke-white [&_path]:transition-all [&_path]:duration-300"

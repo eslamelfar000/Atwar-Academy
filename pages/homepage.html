@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../icons/fontawesome-free-7.2.0-web/fontawesome-free-7.2.0-web/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <title>Atwar - Home Page</title>
 </head>
 
@@ -180,16 +181,41 @@
         <!-- confirmation -->
         <div class="max-w-7xl mx-auto px-4 sm:px-6 z-10">
             <div class="flex flex-col md:flex-row items-center md:gap-10">
-                <div class="title z-10 text-center md:text-right w-full md:w-[30%] xl:w-[35%]">
+                <div class="title z-10 text-center md:text-right w-full md:w-[40%] xl:w-[45%]">
                     <h2 class="text-3xl xl:text-5xl font-[700] text-gray-900 mb-4">الاعتمادات الرسمية</h2>
                 </div>
 
-                <div class="logos-box relative flex items-center justify-center py-6 w-full md:w-[70%] xl:w-[65%]">
-                    <div class="mask absolute inset-0">
+                <div class="logos-box relative flex items-center justify-center py-6 w-full md:w-[60%] xl:w-[55%]">
+                    <!-- <div class="mask absolute inset-0">
                         <img src="../images/logos-mask.png" alt="w-full h-full" class="w-full h-full object-contain">
-                    </div>
-                    <div class="logos-img h-full w-full">
-                        <img src="../images/confirm-logos.png" alt="w-full h-full" class="w-full h-full object-contain">
+                    </div> -->
+                    <div class="swiper logos-swiper w-full overflow-hidden z-10">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide flex justify-center">
+                                <img src="../images/row-1-column-1.png" alt="" class="h-12 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300">
+                            </div>
+                            <div class="swiper-slide flex justify-center">
+                                <img src="../images/row-1-column-2.png" alt="" class="h-12 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300">
+                            </div>
+                            <div class="swiper-slide flex justify-center">
+                                <img src="../images/row-1-column-3.png" alt="" class="h-12 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300">
+                            </div>
+                            <div class="swiper-slide flex justify-center">
+                                <img src="../images/row-1-column-4.png" alt="" class="h-12 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300">
+                            </div>
+                            <div class="swiper-slide flex justify-center">
+                                <img src="../images/row-1-column-1.png" alt="" class="h-12 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300">
+                            </div>
+                            <div class="swiper-slide flex justify-center">
+                                <img src="../images/row-1-column-2.png" alt="" class="h-12 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300">
+                            </div>
+                            <div class="swiper-slide flex justify-center">
+                                <img src="../images/row-1-column-3.png" alt="" class="h-12 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300">
+                            </div>
+                            <div class="swiper-slide flex justify-center">
+                                <img src="../images/row-1-column-4.png" alt="" class="h-12 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -416,7 +442,7 @@
                     <div class="counter">
                         <div class="counter-content text-center space-y-3">
                             <div class="counter-value text-7xl font-bold text-[var(--color-third)] font-['Helvetica']"
-                                data-count="1000">+118
+                                data-count="118">+0
                             </div>
                             <div class="counter-title text-2xl font-bold text-gray-500">المتدربين</div>
                         </div>
@@ -426,7 +452,7 @@
                     <div class="counter">
                         <div class="counter-content text-center space-y-3">
                             <div class="counter-value text-7xl font-bold text-[var(--color-third)] font-['Helvetica']"
-                                data-count="1000">+10
+                                data-count="10">+0
                             </div>
                             <div class="counter-title text-2xl font-bold text-gray-500">الدورات</div>
                         </div>
@@ -436,7 +462,7 @@
                     <div class="counter">
                         <div class="counter-content text-center space-y-3">
                             <div class="counter-value text-7xl font-bold text-[var(--color-third)] font-['Helvetica']"
-                                data-count="1000">+120
+                                data-count="120">+0
                             </div>
                             <div class="counter-title text-2xl font-bold text-gray-500">الشهادات</div>
                         </div>
@@ -446,7 +472,7 @@
                     <div class="counter">
                         <div class="counter-content text-center space-y-3">
                             <div class="counter-value text-7xl font-bold text-[var(--color-third)] font-['Helvetica']"
-                                data-count="1000">+1
+                                data-count="1">+0
                             </div>
                             <div class="counter-title text-2xl font-bold text-gray-500">التقييم</div>
                         </div>
@@ -456,6 +482,8 @@
         </div>
     </section>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="../js/main.js"></script>
 </body>
 
 </html>

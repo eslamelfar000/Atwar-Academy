@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +8,277 @@
     <link rel="stylesheet" href="../../css/main.css">
     <link rel="stylesheet" href="../../icons/fontawesome-free-7.2.0-web/fontawesome-free-7.2.0-web/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="../../js/TraineeLayout.js"></script>
 </head>
+
 <body>
-    
+    <trainee-layout active-tab="myHomewroks">
+        <div class="my-homewroks p-4 sm:p-6 md:p-8 space-y-6">
+            <!-- head -->
+            <div
+                class="head relative mb-4 sm:mb-8 p-4 px-4 md:px-10 bg-[var(--color-fifth)] flex items-center justify-between">
+                <div class="space-y-1">
+                    <h1 class="text-xl md:text-2xl font-bold text-white">
+                        الواجبات التدريبية</h1>
+                    <p class="text-white text-sm md:text-md">تابع واجباتك التدريبية وقم برفع الحل قبل موعد التسليم</p>
+                </div>
+                <!-- Mobile Menu Button -->
+                <button id="menuToggle"
+                    class="lg:hidden text-white cursor-pointer p-1 pt-2 bg-[var(--color-primary)]/10 hover:bg-[var(--color-primary)]/20 rounded-lg transition-all duration-300">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+
+
+            <!-- content -->
+            <div class="content space-y-6 max-w-6xl mx-auto">
+                <!-- Accordion Item 1 (Open) -->
+                <div class="accordion-item bg-transparent overflow-hidden">
+                    <div
+                        class="accordion-header flex items-center justify-between rounded-sm p-4 px-6 sm:p-5 sm:px-8 bg-[#E1F5FE] cursor-pointer hover:bg-[var(--color-fifth)]/40 transition-all duration-300">
+                        <h3 class="text-lg md:text-xl font-bold text-[var(--color-tenth)]">واجبات مادة أساسيات التصميم
+                        </h3>
+                        <i
+                            class="fas fa-chevron-down text-[var(--color-tenth)] transition-transform duration-300 rotate-180"></i>
+                    </div>
+                    <div class="accordion-content transition-all duration-300 overflow-hidden max-h-[2000px]">
+                        <div class="space-y-4 px-4">
+                            <!-- Homework Card 1 -->
+                            <div
+                                class="bg-white p-6 rounded-b-xl shadow-sm border border-gray-100 flex flex-col items-end space-y-4">
+                                <div class="w-full text-right space-y-3">
+                                    <h4 class="text-xl font-bold text-gray-800">الواجب الدرس الأول</h4>
+                                    <div class="desc">
+                                        <p class="text-sm text-gray-400 font-medium">المادة: أساسيات التصميم</p>
+                                        <p class="text-sm text-gray-400 font-medium">موعد التسليم: 15 مارس 2024</p>
+                                    </div>
+                                </div>
+                                <div class="w-full flex flex-wrap gap-2 pt-2 items-center justify-end">
+                                    <span
+                                        class="bg-[#51A4DA] text-white px-3 py-1 rounded-md text-xs font-bold cursor-pointer">نتائج
+                                        الواجب</span>
+                                    <span class="bg-[#2ECC71] text-white px-3 py-1 rounded-md text-xs font-bold">تم
+                                        التسليم</span>
+                                    <span class="bg-[#FF5C5C] text-white px-3 py-1 rounded-md text-xs font-bold">تم
+                                        المراجعة</span>
+                                    <span class="bg-[#FFCC00] text-white px-3 py-1 rounded-md text-xs font-bold">قيد
+                                        التنفيذ</span>
+                                </div>
+                            </div>
+                            <!-- Homework Card 2 -->
+                            <div
+                                class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex flex-col items-end space-y-4">
+                                <div class="w-full text-right space-y-3">
+                                    <h4 class="text-xl font-bold text-gray-800">الواجب الدرس الثاني</h4>
+                                    <div class="desc">
+                                        <p class="text-sm text-gray-400 font-medium">المادة: أساسيات التصميم</p>
+                                        <p class="text-sm text-gray-400 font-medium">موعد التسليم: 19 مارس 2024</p>
+                                    </div>
+                                </div>
+                                <div class="w-full flex flex-wrap gap-2 pt-2 items-center justify-end">
+                                    <span
+                                        class="bg-[#51A4DA] text-white px-3 py-1 rounded-md text-xs font-bold cursor-pointer">نتائج
+                                        الواجب</span>
+                                    <span class="bg-[#2ECC71] text-white px-3 py-1 rounded-md text-xs font-bold">تم
+                                        التسليم</span>
+                                    <span class="bg-[#FF5C5C] text-white px-3 py-1 rounded-md text-xs font-bold">تم
+                                        المراجعة</span>
+                                    <span class="bg-[#FFCC00] text-white px-3 py-1 rounded-md text-xs font-bold">قيد
+                                        التنفيذ</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Accordion Item 2 -->
+                <div class="accordion-item bg-transparent overflow-hidden">
+                    <div
+                        class="accordion-header flex items-center justify-between rounded-sm p-4 px-6 sm:p-5 sm:px-8 bg-[#E1F5FE] cursor-pointer hover:bg-[var(--color-fifth)]/40 transition-all duration-300">
+                        <h3 class="text-lg md:text-xl font-bold text-[var(--color-tenth)]">واجبات مادة الأمن السيبراني
+                        </h3>
+                        <i
+                            class="fas fa-chevron-down text-[var(--color-tenth)] transition-transform duration-300 rotate-180"></i>
+                    </div>
+                    <div class="accordion-content transition-all duration-300 overflow-hidden max-h-[2000px]">
+                        <div class="space-y-4 px-4">
+                            <div
+                                class="bg-white p-6 rounded-b-xl shadow-sm border border-gray-100 flex flex-col items-end space-y-4">
+                                <div class="w-full text-right space-y-3">
+                                    <h4 class="text-xl font-bold text-gray-800">الواجب الدرس الأول</h4>
+                                    <div class="desc">
+                                        <p class="text-sm text-gray-400 font-medium">المادة: أساسيات الأمن السيبراني</p>
+                                        <p class="text-sm text-gray-400 font-medium">موعد التسليم: 05 مارس 2024</p>
+                                    </div>
+                                </div>
+                                <div class="w-full flex flex-wrap gap-2 pt-2 items-center justify-end">
+                                    <span
+                                        class="bg-[#51A4DA] text-white px-3 py-1 rounded-md text-xs font-bold cursor-pointer">نتائج
+                                        الواجب</span>
+                                    <span class="bg-[#2ECC71] text-white px-3 py-1 rounded-md text-xs font-bold">تم
+                                        التسليم</span>
+                                    <span class="bg-[#FF5C5C] text-white px-3 py-1 rounded-md text-xs font-bold">تم
+                                        المراجعة</span>
+                                    <span class="bg-[#FFCC00] text-white px-3 py-1 rounded-md text-xs font-bold">قيد
+                                        التنفيذ</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Collapsed items -->
+                <div class="accordion-item bg-transparent overflow-hidden">
+                    <div
+                        class="accordion-header flex items-center justify-between rounded-sm p-4 px-6 sm:p-5 sm:px-8 bg-[#E1F5FE] cursor-pointer hover:bg-[var(--color-fifth)]/40 transition-all duration-300">
+                        <h3 class="text-lg md:text-xl font-bold text-[var(--color-tenth)]">واجبات مادة إدخال البيانات
+                        </h3>
+                        <i class="fas fa-chevron-down text-[var(--color-tenth)] transition-transform duration-300"></i>
+                    </div>
+                    <div class="accordion-content transition-all duration-300 overflow-hidden max-h-0">
+                        <div class="px-4 sm:px-6 overflow-x-auto">
+                            <div class="p-6 text-center text-gray-500 bg-white">
+                                لا توجد واجبات حالياً لهذه المادة.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item bg-transparent overflow-hidden">
+                    <div
+                        class="accordion-header flex items-center justify-between rounded-sm p-4 px-6 sm:p-5 sm:px-8 bg-[#E1F5FE] cursor-pointer hover:bg-[var(--color-fifth)]/40 transition-all duration-300">
+                        <h3 class="text-lg md:text-xl font-bold text-[var(--color-tenth)]">واجبات دبلوم إدارة المستشفيات
+                        </h3>
+                        <i class="fas fa-chevron-down text-[var(--color-tenth)] transition-transform duration-300"></i>
+                    </div>
+                    <div class="accordion-content transition-all duration-300 overflow-hidden max-h-0">
+
+                        <div class="px-4 sm:px-6 overflow-x-auto">
+                            <div class="p-6 text-center text-gray-500 bg-white"> لا توجد واجبات حالياً لهذا الدبلوم.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Homework Detail Section -->
+                <div class="homework-detail mt-12 bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden">
+                    <div class="p-4 px-6 border-b border-gray-100 bg-gray-50/50">
+                        <h3 class="text-xl font-bold text-right">بيانات الواجب</h3>
+                    </div>
+                    <div class="p-6 sm:p-10 space-y-8">
+                       <div class="top space-y-4">
+                        <div class="flex flex-row justify-between items-start md:items-center gap-6">
+                            <div class="flex items-center gap-4 text-right">
+                                <div class="space-y-4">
+                                    <h4 class="text-xl font-bold">واجب</h4>
+                                </div>
+                            </div>
+                            <button
+                                class="bg-white border px-6 py-2 rounded-sm text-xs sm:text-sm font-bold hover:bg-gray-200 transition-all cursor-pointer">
+                                تحميل الواجب
+                            </button>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 justify-between items-start gap-10">
+                            <div class="right space-y-4">
+                                <div class="desc">
+                                    <p class="text-sm text-gray-400">خاص بدورة</p>
+                                    <p class="text-md font-bold">دورة كيفية إنشاء تطبيق
+                                        iOS</p>
+                                </div>
+                                <div class="flex items-center gap-4 text-right">
+                                    <img src="../../images/home-user.png" alt="Teacher" class="w-16 h-16 rounded-full">
+                                    <div class="space-y-1">
+                                        <div class="flex items-center gap-2 justify-start">
+                                            <h5 class="font-bold text-gray-800">خالد الشهراني</h5>
+                                            <span class="bg-[#2ECC71] text-white text-[10px] px-2 py-0.5 rounded">العميل</span>
+                                        </div>
+                                        <p class="text-sm text-gray-400 flex items-center gap-2">
+                                            k.bandat@gmail.com
+                                            <svg width="35" height="35" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M10.9967 3.166C12.3465 1.52582 14.8579 1.52582 16.2077 3.166C16.9218 4.03368 18.0209 4.48896 19.1394 4.38034C21.2536 4.17501 23.0294 5.95082 22.8241 8.06506C22.7155 9.18352 23.1707 10.2827 24.0384 10.9967C25.6786 12.3465 25.6786 14.8579 24.0384 16.2077C23.1707 16.9218 22.7155 18.0209 22.8241 19.1394C23.0294 21.2536 21.2536 23.0294 19.1394 22.8241C18.0209 22.7155 16.9218 23.1707 16.2077 24.0384C14.8579 25.6786 12.3465 25.6786 10.9967 24.0384C10.2827 23.1707 9.18352 22.7155 8.06506 22.8241C5.95082 23.0294 4.17501 21.2536 4.38034 19.1394C4.48896 18.0209 4.03368 16.9218 3.166 16.2077C1.52582 14.8579 1.52582 12.3465 3.166 10.9967C4.03368 10.2827 4.48896 9.18352 4.38034 8.06506C4.17501 5.95082 5.95082 4.17501 8.06506 4.38034C9.18352 4.48896 10.2827 4.03368 10.9967 3.166Z"
+                                                    fill="#3283ED" />
+                                                <path d="M10.0192 13.8345L12.8661 16.6821L17.1855 10.9121" stroke="white" stroke-width="1.2185"
+                                                    stroke-linecap="round" />
+                                            </svg>
+                        
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <div class="space-y-6 text-right w-full md:w-auto border-r border-gray-500 pr-6">
+                                <div>
+                                    <p class="text-gray-400 text-sm">اسم القسم</p>
+                                    <p class="font-bold text-gray-800">الخطوة الأولى : تحليل النظام والتحضير للتطوير
+                                    </p>
+                                </div>
+                                <div>
+                                    <p class="text-gray-400 text-sm">تاريخ التسليم</p>
+                                    <p class="font-bold text-gray-800">25 أكتوبر 2024 . 02:38 pm</p>
+                                </div>
+                            </div>
+                        </div>
+                       </div>
+
+                        <div class="space-y-3">
+                            <label class="block text-right text-sm font-bold">ترك رسالة أو ملاحظة
+                                للمدرب</label>
+                            <textarea placeholder="للأسف لديك أخطاء كثيرة، رجاء مراجعة الواجب مرة أخرى"
+                                class="w-full bg-gray-50 border border-gray-200 rounded-lg p-4 text-sm text-right text-gray-500 focus:outline-none focus:ring-2 focus:ring-[var(--color-fifth)] min-h-[100px]"></textarea>
+                        </div>
+
+                        <div class="flex justify-end gap-2">
+                            <button
+                                class="bg-[var(--color-fifth)] text-white py-3 px-10 rounded-lg font-bold shadow-lg shadow-blue-200 hover:bg-[var(--color-fifth)]/90 transition-all cursor-pointer">
+                                قبول الواجب
+                            </button>
+                            <button
+                                class="bg-red-600 text-white py-3 px-6 rounded-lg font-bold shadow-lg shadow-red-200 hover:bg-red-700 transition-all cursor-pointer">
+                                رفض الواجب
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', () => {
+                    setTimeout(() => {
+                        const headers = document.querySelectorAll('.accordion-header');
+
+                        headers.forEach(h => {
+                            if (!h.nextElementSibling.classList.contains('max-h-0')) {
+                                h.classList.add('border', 'border-gray-400');
+                            }
+                        });
+
+                        headers.forEach((header) => {
+                            header.addEventListener('click', () => {
+                                const content = header.nextElementSibling;
+                                const icon = header.querySelector('i');
+
+                                const isOpen = !content.classList.contains('max-h-0');
+
+                                if (isOpen) {
+                                    content.classList.remove('max-h-[2000px]');
+                                    content.classList.add('max-h-0');
+                                    if (icon) icon.classList.remove('rotate-180');
+                                    header.classList.remove('border', 'border-gray-400');
+                                } else {
+                                    content.classList.remove('max-h-0');
+                                    content.classList.add('max-h-[2000px]');
+                                    if (icon) icon.classList.add('rotate-180');
+                                    header.classList.add('border', 'border-gray-400');
+                                }
+                            });
+                        });
+                    }, 100);
+                });
+            </script>
+        </div>
+    </trainee-layout>
 </body>
+
 </html>

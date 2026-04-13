@@ -1,14 +1,173 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Courses</title>
+    <title>دوراتي</title>
     <link rel="stylesheet" href="../../css/main.css">
     <link rel="stylesheet" href="../../icons/fontawesome-free-7.2.0-web/fontawesome-free-7.2.0-web/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="../../js/TraineeLayout.js"></script>
 </head>
+
 <body>
-    
+    <trainee-layout active-tab="myCourses">
+        <div class="my-courses">
+            <!-- head -->
+            <div
+                class="head relative mb-4 sm:mb-8 p-6 md:p-8 px-4 md:px-10 text-center bg-[var(--color-forth)] flex items-center justify-between">
+                <div class="flex items-center gap-4">
+                    <svg width="25" height="28" viewBox="0 0 25 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M23.1899 13.6651V20.4686C23.1899 23.0348 23.1899 24.3166 22.3926 25.114C21.5952 25.9113 20.3135 25.9113 17.7472 25.9113H4.82066C3.91847 25.9113 3.05323 25.5529 2.41529 24.915C1.77734 24.277 1.41895 23.4118 1.41895 22.5096M23.1899 13.6651V6.8617C23.1899 4.29544 23.1899 3.01367 22.3926 2.21631C21.5952 1.41895 20.3135 1.41895 17.7472 1.41895H6.8617C4.29544 1.41895 3.01367 1.41895 2.21631 2.21631C1.41895 3.01367 1.41895 4.29544 1.41895 6.8617V22.5096M23.1899 13.6651C23.1899 16.2314 23.1899 17.5132 22.3926 18.3105C21.5952 19.1079 20.3135 19.1079 17.7472 19.1079H4.82066C3.91847 19.1079 3.05323 19.4663 2.41529 20.1042C1.77734 20.7422 1.41895 21.6074 1.41895 22.5096"
+                            stroke="#969696" stroke-width="2.83832" />
+                        <path d="M8.22266 8.22363H16.3868" stroke="#969696" stroke-width="2.83832"
+                            stroke-linecap="round" />
+                    </svg>
+
+                    <h1 class="text-xl sm:text-2xl font-bold text-[var(--color-ninth)] ">
+                        دوراتي</h1>
+                </div>
+                <!-- Mobile Menu Button -->
+                <button id="menuToggle"
+                    class="lg:hidden text-[var(--color-primary)] cursor-pointer p-1 pt-2 bg-[var(--color-primary)]/10 hover:bg-[var(--color-primary)]/20 rounded-lg transition-all duration-300">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+
+
+            <div class="content p-4 sm:p-6 md:p-8">
+                <div class="courses grid grid-cols-12 gap-6">
+                    <!-- Main Course Card -->
+                    <div class="group main-course-card col-span-12 flex flex-col">
+                        <a href="" class="image relative bg-[var(--color-forth)] flex justify-center shrink-0">
+                            <img src="../../images/course-card-img.png" alt="">
+                            <div class="overlay absolute top-0 left-0 opacity-0 group-hover:opacity-100 w-full h-full bg-black/50 transition-all duration-300"></div>
+                        </a>
+                        <div class="info flex-1 flex flex-col bg-[var(--color-primary)] text-white p-4 sm:p-6 md:p-8">
+                            <a href="">
+                                <h2 class="title text-xl sm:text-2xl font-bold mb-10">دورة ادخال البيانات ومعالجة النصوص</h2>
+                            </a>
+                            <div class="progress flex flex-col items-center gap-2 mt-auto">
+                                <div class="progress-bar h-3 bg-white w-full">
+                                    <div class="progress-bar-fill h-3 bg-green-400" style="width: 50%;"></div>
+                                </div>
+                                <div class="progress-text">50%</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Course Card 1 -->
+                    <div class="group relative overflow-hidden course-card col-span-12 md:col-span-6 flex flex-col">
+                        <a href="" class="image min-h-52 relative bg-[var(--color-forth)] flex items-center justify-center shrink-0">
+                            <img src="../../images/course-card-img.png" alt="" class="w-full h-full object-cover">
+                            <div class="overlay absolute top-0 left-0 opacity-0 group-hover:opacity-100 w-full h-full bg-black/50 transition-all duration-300"></div>
+                        </a>
+                        <div class="info flex-1 flex flex-col bg-[var(--color-primary)] text-white p-4 sm:p-6 md:p-8">
+                            <a href="">
+                                <h2 class="title text-xl sm:text-2xl font-bold mb-10">دورة التدريب على طرق العناية بالبشرة</h2>
+                            </a>
+                            <div class="progress flex flex-col items-center gap-2 mt-auto">
+                                <div class="progress-bar h-3 bg-white w-full overflow-hidden">
+                                    <div class="progress-bar-fill h-3 bg-green-400" style="width: 50%;"></div>
+                                </div>
+                                <div class="progress-text text-sm">50%</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Course Card 2 -->
+                    <div class="group relative overflow-hidden course-card col-span-12 md:col-span-6 flex flex-col">
+                        <a href="" class="image min-h-52 relative bg-[var(--color-forth)] flex items-center justify-center shrink-0">
+                            <img src="../../images/course-card-img.png" alt="" class="w-full h-full object-cover">
+                            <div class="overlay absolute top-0 left-0 opacity-0 group-hover:opacity-100 w-full h-full bg-black/50 transition-all duration-300"></div>
+                        </a>
+                        <div class="info flex-1 flex flex-col bg-[var(--color-primary)] text-white p-4 sm:p-6 md:p-8">
+                            <a href="">
+                                <h2 class="title text-xl sm:text-2xl font-bold mb-10">دورة مهارات تصميم الأنفوجرافيك</h2>
+                            </a>
+                            <div class="progress flex flex-col items-center gap-2 mt-auto">
+                                <div class="progress-bar h-3 bg-white w-full overflow-hidden">
+                                    <div class="progress-bar-fill h-3 bg-green-400" style="width: 50%;"></div>
+                                </div>
+                                <div class="progress-text text-sm">50%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="group relative overflow-hidden course-card col-span-12 md:col-span-6 flex flex-col">
+                        <a href="" class="image min-h-52 relative bg-[var(--color-forth)] flex items-center justify-center shrink-0">
+                            <img src="../../images/course-card-img.png" alt="" class="w-full h-full object-cover">
+                            <div class="overlay absolute top-0 left-0 opacity-0 group-hover:opacity-100 w-full h-full bg-black/50 transition-all duration-300"></div>
+                        </a>
+                        <div class="info flex-1 flex flex-col bg-[var(--color-primary)] text-white p-4 sm:p-6 md:p-8">
+                            <a href="">
+                                <h2 class="title text-xl sm:text-2xl font-bold mb-10">دورة مهارات تصميم الأنفوجرافيك</h2>
+                            </a>
+                            <div class="progress flex flex-col items-center gap-2 mt-auto">
+                                <div class="progress-bar h-3 bg-white w-full overflow-hidden">
+                                    <div class="progress-bar-fill h-3 bg-green-400" style="width: 50%;"></div>
+                                </div>
+                                <div class="progress-text text-sm">50%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="group relative overflow-hidden course-card col-span-12 md:col-span-6 flex flex-col">
+                        <a href="" class="image min-h-52 relative bg-[var(--color-forth)] flex items-center justify-center shrink-0">
+                            <img src="../../images/course-card-img.png" alt="" class="w-full h-full object-cover">
+                            <div class="overlay absolute top-0 left-0 opacity-0 group-hover:opacity-100 w-full h-full bg-black/50 transition-all duration-300"></div>
+                        </a>
+                        <div class="info flex-1 flex flex-col bg-[var(--color-primary)] text-white p-4 sm:p-6 md:p-8">
+                            <a href="">
+                                <h2 class="title text-xl sm:text-2xl font-bold mb-10">دورة مهارات تصميم الأنفوجرافيك</h2>
+                            </a>
+                            <div class="progress flex flex-col items-center gap-2 mt-auto">
+                                <div class="progress-bar h-3 bg-white w-full overflow-hidden">
+                                    <div class="progress-bar-fill h-3 bg-green-400" style="width: 50%;"></div>
+                                </div>
+                                <div class="progress-text text-sm">50%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="group relative overflow-hidden course-card col-span-12 md:col-span-6 flex flex-col">
+                        <a href="" class="image min-h-52 relative bg-[var(--color-forth)] flex items-center justify-center shrink-0">
+                            <img src="../../images/course-card-img.png" alt="" class="w-full h-full object-cover">
+                            <div class="overlay absolute top-0 left-0 opacity-0 group-hover:opacity-100 w-full h-full bg-black/50 transition-all duration-300"></div>
+                        </a>
+                        <div class="info flex-1 flex flex-col bg-[var(--color-primary)] text-white p-4 sm:p-6 md:p-8">
+                            <a href="">
+                                <h2 class="title text-xl sm:text-2xl font-bold mb-10">دورة مهارات تصميم الأنفوجرافيك</h2>
+                            </a>
+                            <div class="progress flex flex-col items-center gap-2 mt-auto">
+                                <div class="progress-bar h-3 bg-white w-full overflow-hidden">
+                                    <div class="progress-bar-fill h-3 bg-green-400" style="width: 50%;"></div>
+                                </div>
+                                <div class="progress-text text-sm">50%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="group relative overflow-hidden course-card col-span-12 md:col-span-6 flex flex-col">
+                        <a href="" class="image min-h-52 relative bg-[var(--color-forth)] flex items-center justify-center shrink-0">
+                            <img src="../../images/course-card-img.png" alt="" class="w-full h-full object-cover">
+                            <div class="overlay absolute top-0 left-0 opacity-0 group-hover:opacity-100 w-full h-full bg-black/50 transition-all duration-300"></div>
+                        </a>
+                        <div class="info flex-1 flex flex-col bg-[var(--color-primary)] text-white p-4 sm:p-6 md:p-8">
+                            <a href="">
+                                <h2 class="title text-xl sm:text-2xl font-bold mb-10">دورة مهارات تصميم الأنفوجرافيك</h2>
+                            </a>
+                            <div class="progress flex flex-col items-center gap-2 mt-auto">
+                                <div class="progress-bar h-3 bg-white w-full overflow-hidden">
+                                    <div class="progress-bar-fill h-3 bg-green-400" style="width: 50%;"></div>
+                                </div>
+                                <div class="progress-text text-sm">50%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </trainee-layout>
 </body>
+
 </html>

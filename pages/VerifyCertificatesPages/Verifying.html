@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/main.css" />
-    <link rel="stylesheet" href="../icons/fontawesome-free-7.2.0-web/fontawesome-free-7.2.0-web/css/all.min.css" />
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../icons/fontawesome-free-7.2.0-web/fontawesome-free-7.2.0-web/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <title>Document</title>
+    <title>التحقق من الشهادات</title>
 </head>
 
 <body>
@@ -34,8 +34,7 @@
                     <a href="" class="text-md 2xl:text-lg font-medium ">عروض خصومات</a>
                 </div>
                 <div class="nav-link block sm:!hidden hover:text-[var(--color-primary)] transition-all duration-300">
-                    <a href="../pages/VerifyCertificatesPages/Verifying.html"
-                        class="text-md 2xl:text-lg font-medium ">التحقق من الشهادة</a>
+                    <a href="./Verifying.html" class="text-md 2xl:text-lg font-medium ">التحقق من الشهادة</a>
                 </div>
             </div>
 
@@ -166,38 +165,53 @@
     </div>
 
 
+    <!-- verify certificate -->
+    <div class="verify-certificate min-h-[calc(100vh-200px)] p-6 lg:p-16">
+        <!-- accordion -->
+        <div class="accordion">
+            <div class="accordion-item space-y-4">
+                <div
+                    class="accordion-header flex items-center justify-between bg-[var(--color-fifth)]/40 p-4 px-6 rounded cursor-pointer">
+                    <h3 class="text-lg md:text-xl font-bold">التحقق من الشهادة</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="accordion-content overflow-hidden max-h-0 transition-all duration-300">
+                    <div class="verify-certificate-box p-8 border border-gray-400 rounded-lg space-y-10">
+                        <div class="top space-y-1">
+                            <h3 class="md:text-xl">يتيح لك هذا القسم التأكد من صحة الشهادات الصادرة من منصة معهد
+                                اكاديمية اطوار العالي للتدريب يمكنك التحقق من الشهادة
+                                بسهولة من خلال إدخال رقم الشهادة أو رمز التحقق في الحقل المخصص أدناه.</h3>
+                        </div>
+
+                        <div class="verify-certificate-footer space-y-6">
+                            <div class="info space-y-2">
+                                <h4 class="text-lg md:text-3xl font-bold">تحقق من صحة الشهادة</h4>
+                                <p class="text-sm md:text-base font-[500] text-green-500">لكل شهادة رقم تحقق
+                                    خاص تجده أسفلها .</p>
+                            </div>
+
+                            <div class="action">
+                                <form action="" class="flex flex-col gap-4">
+                                    <div class="input-group flex flex-col gap-1">
+                                        <label for="verify-certificate">رقم الشهادة</label>
+                                        <input type="text" id="verify-certificate"
+                                            class="border border-gray-300 rounded-lg p-4 text-sm focus:outline-none focus:ring-1 focus:ring-[var(--color-primary)]"
+                                            placeholder="أدخل رقم التحقق" required>
+                                    </div>
+                                    <button type="submit"
+                                        class="bg-green-500 hover:bg-green-600 cursor-pointer w-full text-white rounded-lg p-4 transition-all duration-300">تحقق من الشهادة</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
     <script>
-        // Mobile menu toggle
-        const menuToggle = document.getElementById('menuToggle');
-        const closeMenu = document.getElementById('closeMenu');
-        const sidebar = document.getElementById('sidebar');
-        const overlay = document.getElementById('overlay');
-
-        function openMenu() {
-            sidebar.classList.remove('translate-x-full');
-            sidebar.classList.add('translate-x-0');
-            overlay.classList.remove('hidden');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeSidebar() {
-            sidebar.classList.add('translate-x-full');
-            sidebar.classList.remove('translate-x-0');
-            overlay.classList.add('hidden');
-            document.body.style.overflow = '';
-        }
-
-        menuToggle.addEventListener('click', openMenu);
-        closeMenu.addEventListener('click', closeSidebar);
-        overlay.addEventListener('click', closeSidebar);
-
-        // Close menu on window resize to desktop
-        window.addEventListener('resize', () => {
-            if (window.innerWidth >= 1024) {
-                closeSidebar();
-            }
-        });
-
         const menuBtn = document.getElementById("menuBtn");
         const closeBtn = document.getElementById("closeBtn");
         const mobileDrawer = document.getElementById("mobileDrawer");
@@ -220,22 +234,64 @@
             }, 300);
         }
 
-        menuBtn.addEventListener("click", openDrawer);
-        closeBtn.addEventListener("click", closeDrawer);
-        drawerBackdrop.addEventListener("click", closeDrawer);
+        if (menuBtn) menuBtn.addEventListener("click", openDrawer);
+        if (closeBtn) closeBtn.addEventListener("click", closeDrawer);
+        if (drawerBackdrop) drawerBackdrop.addEventListener("click", closeDrawer);
 
         // Mobile Search Toggle
         const mobileSearchBtn = document.getElementById("mobileSearchBtn");
         const mobileSearchField = document.getElementById("mobileSearchField");
         const closeMobileSearch = document.getElementById("closeMobileSearch");
 
-        mobileSearchBtn.addEventListener("click", () => {
-            mobileSearchField.classList.remove("hidden");
-            mobileSearchField.querySelector("input").focus();
-        });
+        if (mobileSearchBtn) {
+            mobileSearchBtn.addEventListener("click", () => {
+                mobileSearchField.classList.remove("hidden");
+                mobileSearchField.querySelector("input").focus();
+            });
+        }
 
-        closeMobileSearch.addEventListener("click", () => {
-            mobileSearchField.classList.add("hidden");
+        if (closeMobileSearch) {
+            closeMobileSearch.addEventListener("click", () => {
+                mobileSearchField.classList.add("hidden");
+            });
+        }
+
+
+
+
+        // CTA verify certificate
+        document.addEventListener('DOMContentLoaded', () => {
+            const headers = document.querySelectorAll('.accordion-header');
+
+            headers.forEach((header) => {
+                header.addEventListener('click', () => {
+                    const content = header.nextElementSibling;
+                    const icon = header.querySelector('i');
+
+                    const isOpen = !content.classList.contains('max-h-0');
+
+                    if (isOpen) {
+                        content.classList.remove('max-h-[2000px]');
+                        content.classList.add('max-h-0');
+                        if (icon) icon.classList.remove('rotate-180');
+                    } else {
+                        content.classList.remove('max-h-0');
+                        content.classList.add('max-h-[2000px]');
+                        if (icon) icon.classList.add('rotate-180', 'transition-transform', 'duration-300');
+                    }
+                });
+            });
+
+            // Auto-open the first one
+            if (headers.length > 0) {
+                const firstHeader = headers[0];
+                const firstContent = firstHeader.nextElementSibling;
+                const firstIcon = firstHeader.querySelector('i');
+
+                firstContent.classList.remove('max-h-0');
+                firstContent.classList.add('max-h-[2000px]');
+                if (firstIcon) firstIcon.classList.add('rotate-180');
+            }
         });
     </script>
 </body>

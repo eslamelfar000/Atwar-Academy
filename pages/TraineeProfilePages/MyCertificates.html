@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../icons/fontawesome-free-7.2.0-web/fontawesome-free-7.2.0-web/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="../../js/TraineeLayout.js"></script>
+    <title>شهاداتي</title>
+</head>
+
+<body>
+    <trainee-layout active-tab="myCertificates">
+        <div class="my-certificates p-4 sm:p-6 md:p-">
+            <!-- head -->
+            <div
+                class="head relative mb-4 sm:mb-8 p-4 px-4 md:px-10 bg-[var(--color-fifth)] flex items-center justify-between">
+                <div class="space-y-1">
+                    <h1 class="text-xl md:text-2xl font-bold text-white">
+                        شهاداتي التدريبية</h1>
+                    <p class="text-white text-sm md:text-md">استعراض جميع الشهادات التي حصلت عليها.</p>
+                </div>
+                <!-- Mobile Menu Button -->
+                <button id="menuToggle"
+                    class="lg:hidden text-white cursor-pointer p-1 pt-2 bg-[var(--color-primary)]/10 hover:bg-[var(--color-primary)]/20 rounded-lg transition-all duration-300">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+
+            <!-- content -->
+            <div class="content space-y-10">
+                <!-- certificates-cards -->
+                <div class="certificates-cards grid grid-cols-1 md:grid-cols-2 3xl:grid-cols-3 gap-4">
+                    <div
+                        class="certificate-card p-4 lg:p-6 bg-white shadow-md border border-gray-300 rounded-2xl space-y-8">
+                        <div
+                            class="certificate-image-content bg-[var(--color-primary)] p-6 rounded-2xl space-y-4 text-center">
+                            <div class="badge flex items-center justify-center">
+                                <p class="text-xs text-white bg-[var(--color-fifth)] px-4 py-2 rounded-full">منصة معهد
+                                    اكاديمية
+                                    اطوار العالي للتدريب</p>
+                            </div>
+                            <div class="main-title flex items-center justify-center">
+                                <h2 class="text-4xl font-bold text-white max-w-xs leading-10">دبلوم السلامة
+                                    والصحة المهنية</h2>
+                            </div>
+                            <div class="desc flex items-center justify-center">
+                                <p class="max-w-[270px] text-xs text-white/80">أكمل المتدرب هذه الدورة التدريبية وتعلّم
+                                    خلالها 7
+                                    منهجيات تدريبية موزعة على مراحل البرنامج.</p>
+                            </div>
+                            <div
+                                class="meta flex flex-wrap items-center justify-center w-fit mx-auto text-black/90 gap-3 bg-white px-4 py-2 rounded-2xl">
+                                <div class="meta-item flex items-center gap-1 text-xs">
+                                    <i class="fas fa-video"></i>
+                                    <p class="text-xs">40 درس مسجل</p>
+                                </div>
+                                <div class="meta-item flex items-center gap-1 text-xs">
+                                    <i class="fas fa-clock"></i>
+                                    <p class="text-xs">تقييمات فردية</p>
+                                </div>
+                                <div class="meta-item flex items-center gap-1 text-xs">
+                                    <i class="fas fa-file"></i>
+                                    <p class="text-xs">قوالب وملفات</p>
+                                </div>
+                                <div class="meta-item flex items-center gap-1 text-xs">
+                                    <i class="fas fa-folder"></i>
+                                    <p class="text-xs">موارد و انتقالات</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="certificate-info space-y-10">
+                            <div class="certificate-title">
+                                <h3 class="text-lg md:text-xl font-bold">دبلوم السلامة
+                                    والصحة المهنية</h3>
+                            </div>
+                            <div class="certificate-actions flex flex-col gap-3">
+                                <a href="#"
+                                    class="certificate-action bg-[var(--color-fifth)] hover:bg-[var(--color-primary)] text-white rounded-xl p-4 text-center transition-all duration-300">عرض
+                                    الشهادة</a>
+                                <a href="#"
+                                    class="certificate-action border border-[var(--color-fifth)] hover:bg-[var(--color-fifth)] hover:text-white text-[var(--color-fifth)] rounded-xl p-4 text-center transition-all duration-300">مشاركة
+                                    على لينكد إن</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="certificate-card p-4 lg:p-6 bg-white shadow-md border border-gray-300 rounded-2xl space-y-8">
+                        <div
+                            class="certificate-image-content bg-[var(--color-primary)] p-6 rounded-2xl space-y-4 text-center">
+                            <div class="badge flex items-center justify-center">
+                                <p class="text-xs text-white bg-[var(--color-fifth)] px-4 py-2 rounded-full">منصة معهد
+                                    اكاديمية
+                                    اطوار العالي للتدريب</p>
+                            </div>
+                            <div class="main-title flex items-center justify-center">
+                                <h2 class="text-4xl font-bold text-white max-w-xs leading-10">دبلوم السلامة
+                                    والصحة المهنية</h2>
+                            </div>
+                            <div class="desc flex items-center justify-center">
+                                <p class="max-w-[270px] text-xs text-white/80">أكمل المتدرب هذه الدورة التدريبية وتعلّم
+                                    خلالها 7
+                                    منهجيات تدريبية موزعة على مراحل البرنامج.</p>
+                            </div>
+                            <div
+                                class="meta flex flex-wrap items-center justify-center w-fit mx-auto text-black/90 gap-3 bg-white px-4 py-2 rounded-2xl">
+                                <div class="meta-item flex items-center gap-1 text-xs">
+                                    <i class="fas fa-video"></i>
+                                    <p class="text-xs">40 درس مسجل</p>
+                                </div>
+                                <div class="meta-item flex items-center gap-1 text-xs">
+                                    <i class="fas fa-clock"></i>
+                                    <p class="text-xs">تقييمات فردية</p>
+                                </div>
+                                <div class="meta-item flex items-center gap-1 text-xs">
+                                    <i class="fas fa-file"></i>
+                                    <p class="text-xs">قوالب وملفات</p>
+                                </div>
+                                <div class="meta-item flex items-center gap-1 text-xs">
+                                    <i class="fas fa-folder"></i>
+                                    <p class="text-xs">موارد و انتقالات</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="certificate-info space-y-10">
+                            <div class="certificate-title">
+                                <h3 class="text-lg md:text-xl font-bold">دبلوم السلامة
+                                    والصحة المهنية</h3>
+                            </div>
+                            <div class="certificate-actions flex flex-col gap-3">
+                                <a href="#"
+                                    class="certificate-action bg-[var(--color-fifth)] hover:bg-[var(--color-primary)] text-white rounded-xl p-4 text-center transition-all duration-300">عرض
+                                    الشهادة</a>
+                                <a href="#"
+                                    class="certificate-action border border-[var(--color-fifth)] hover:bg-[var(--color-fifth)] hover:text-white text-[var(--color-fifth)] rounded-xl p-4 text-center transition-all duration-300">مشاركة
+                                    على لينكد إن</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- verify certificate -->
+                <div class="verify-certificate">
+                    <!-- accordion -->
+                    <div class="accordion">
+                        <div class="accordion-item space-y-4">
+                            <div
+                                class="accordion-header flex items-center justify-between bg-[var(--color-fifth)]/40 p-4 px-6 rounded cursor-pointer">
+                                <h3 class="text-lg md:text-xl font-bold">للتحقق من الشهادة</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="accordion-content overflow-hidden max-h-0 transition-all duration-300">
+                                <div class="verify-certificate-box p-8 border border-gray-400 rounded-lg space-y-10">
+                                    <div class="top space-y-1">
+                                        <div class="sub-title flex items-center gap-2">
+                                            <div
+                                                class="icon bg-green-500 p-1 py-1.5 rounded-full flex items-center justify-center">
+                                                <i class="fas fa-check text-white text-xs"></i>
+                                            </div>
+                                            <p class="text-green-500 font-bold">شهادة صالحة</p>
+                                        </div>
+                                        <div class="verify-certificate-body flex md:items-end justify-between flex-col md:flex-row gap-1">
+                                            <div class="info">
+                                                <h4 class="text-lg md:text-xl font-bold">هذه الشهادةصالحة منحت إلى خالد
+                                                    الشهراني</h4>
+                                                <p class="text-sm md:text-base font-[500] text-gray-600">منصة معهد
+                                                    اكاديمية
+                                                    اطوار العالي للتدريب</p>
+                                            </div>
+                                            <div class="date">
+                                                <p class="text-xs md:text-sm font-[500] text-gray-600">حرر في :
+                                                    25/3/2026
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="verify-certificate-footer space-y-6">
+                                        <div class="info">
+                                            <h4 class="text-lg md:text-xl font-bold">تحقق من صحة الشهادة</h4>
+                                            <p class="text-sm md:text-base font-[500] text-green-500">لكل شهادة رقم تحقق
+                                                خاص تجده أسفلها .</p>
+                                        </div>
+
+                                        <div class="action">
+                                            <form action="" class="flex flex-col gap-4">
+                                                <div class="input-group flex flex-col gap-1">
+                                                    <label for="verify-certificate">رقم الشهادة</label>
+                                                    <input type="text" id="verify-certificate"
+                                                        class="border border-gray-300 rounded-lg p-4 text-sm focus:outline-none focus:ring-1 focus:ring-[var(--color-primary)]"
+                                                        placeholder="أدخل رقم التحقق" required>
+                                                </div>
+                                                <button type="submit"
+                                                    class="bg-[var(--color-primary)] hover:bg-[var(--color-fifth)] cursor-pointer w-full text-white rounded-lg p-4 transition-all duration-300">تحقق</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </trainee-layout>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Use setTimeout to ensure TraineeLayout has injected children
+            setTimeout(() => {
+                const headers = document.querySelectorAll('.accordion-header');
+                
+                headers.forEach((header) => {
+                    header.addEventListener('click', () => {
+                        const content = header.nextElementSibling;
+                        const icon = header.querySelector('i');
+
+                        const isOpen = content.classList.contains('max-h-[5000px]');
+
+                        if (isOpen) {
+                            // Close it
+                            content.classList.remove('max-h-[5000px]');
+                            content.classList.add('max-h-0');
+                            if (icon) icon.classList.remove('rotate-180');
+                        } else {
+                            // Open it
+                            // Close others if there were any (optional, but good practice)
+                            document.querySelectorAll('.accordion-content').forEach(c => {
+                                if (c !== content) {
+                                    c.classList.remove('max-h-[5000px]');
+                                    c.classList.add('max-h-0');
+                                    const otherHeader = c.previousElementSibling;
+                                    const otherIcon = otherHeader.querySelector('i');
+                                    if (otherIcon) otherIcon.classList.remove('rotate-180');
+                                }
+                            });
+
+                            content.classList.remove('max-h-0');
+                            content.classList.add('max-h-[5000px]');
+                            if (icon) icon.classList.add('rotate-180', 'transition-transform', 'duration-300');
+                        }
+                    });
+                });
+
+                // Auto-open the first one if needed (as per previous patterns in this project)
+                if (headers.length > 0) {
+                    // header.click() or manually open
+                    // For now, let's keep it closed by default unless the user wants it open
+                    // The user said in history: "first item set to open by default"
+                    const firstHeader = headers[0];
+                    const firstContent = firstHeader.nextElementSibling;
+                    const firstIcon = firstHeader.querySelector('i');
+                    
+                    firstContent.classList.remove('max-h-0');
+                    firstContent.classList.add('max-h-[5000px]');
+                    if (firstIcon) firstIcon.classList.add('rotate-180', 'transition-transform', 'duration-300');
+                }
+            }, 100);
+        });
+    </script>
+</body>
+
+</html>

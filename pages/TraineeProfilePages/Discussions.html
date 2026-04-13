@@ -1,14 +1,115 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Discussions</title>
+    <title>المناقشات</title>
     <link rel="stylesheet" href="../../css/main.css">
     <link rel="stylesheet" href="../../icons/fontawesome-free-7.2.0-web/fontawesome-free-7.2.0-web/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="../../js/TraineeLayout.js"></script>
 </head>
+
 <body>
-    
+    <trainee-layout active-tab="discussions">
+        <div class="cover p-4 sm:p-6 lg:p-8 bg-gray-200">
+            <div
+                class="flex flex-col md:flex-row h-[calc(100vh-0px)] lg:h-[calc(100vh-170px)] bg-white rounded-2xl overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
+                <!-- Discussions Sidebar (Right side in RTL) -->
+                <div class="w-full md:w-[300px] lg:w-[350px] xl:w-[400px] border-l border-gray-100 flex flex-col bg-white">
+                    <!-- Header -->
+                    <div class="p-8 pb-4">
+                        <h1 class="text-xl font-bold text-tenth mb-6">قائمة المناقشات</h1>
+                        <!-- Search Input -->
+                        <div class="relative group">
+                            <input type="text" placeholder="ابحث عن محادثة..."
+                                class="w-full bg-[#F8F9FA] border-none rounded-xl py-4 pr-12 pl-4 focus:ring-1 focus:ring-[var(--color-primary)] text-xs transition-all outline-none placeholder:text-gray-400">
+                            <i
+                                class="fas fa-search absolute right-5 top-1/2 -translate-y-1/2 text-gray-300 group-focus-within:text-[var(--color-primary)] transition-colors"></i>
+                        </div>
+                    </div>
+
+                    <!-- Discussions List -->
+                    <div class="flex-1 overflow-y-auto px-4 pb-4 custom-scrollbar">
+                        <!-- Discussion Item 1 (Active/Online) -->
+                        <div
+                            class="flex items-center gap-4 p-3 rounded-xl hover:bg-[#F8F9FA] cursor-pointer transition-all">
+                            <div class="relative shrink-0">
+                                <div
+                                    class="w-14 h-14 rounded-full bg-[#E5E7EB] flex items-center justify-center text-gray-400 font-bold text-lg">
+                                    ع
+                                </div>
+                                <span
+                                    class="absolute bottom-1 right-1 w-3.5 h-3.5 bg-[#10B981] border-2 border-white rounded-full"></span>
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <div class="flex justify-between items-center mb-1">
+                                    <h3 class="font-bold text-[var(--color-primary)] truncate text-sm">عبدالله القحطاني
+                                    </h3>
+                                    <span class="text-[10px] text-gray-400 whitespace-nowrap">آخر ظهور منذ 5
+                                        دقائق</span>
+                                </div>
+                                <p class="text-[10px] text-gray-500 truncate leading-relaxed">بالتأكيد، الفكرة تعتمد على
+                                    تطبيق الخطوات الع...</p>
+                            </div>
+                        </div>
+
+                        <!-- Discussion Item 2 -->
+                        <div
+                            class="flex items-center gap-4 p-3 rounded-xl hover:bg-[#F8F9FA] cursor-pointer transition-all">
+                            <div class="relative shrink-0">
+                                <div
+                                    class="w-14 h-14 rounded-full bg-[#E5E7EB] flex items-center justify-center text-gray-400 font-bold text-lg">
+                                    أ
+                                </div>
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <div class="flex justify-between items-center mb-1">
+                                    <h3 class="font-bold text-[var(--color-primary)] truncate text-sm">الهام</h3>
+                                    <span class="text-[10px] text-gray-400 whitespace-nowrap">منذ ساعة</span>
+                                </div>
+                                <p class="text-[10px] text-gray-400 truncate leading-relaxed">اضغط لبدء المحادثة ...</p>
+                            </div>
+                        </div>
+
+                        <!-- Discussion Item 3 -->
+                        <div
+                            class="flex items-center gap-4 p-3 rounded-xl hover:bg-[#F8F9FA] cursor-pointer transition-all">
+                            <div class="relative shrink-0">
+                                <div
+                                    class="w-14 h-14 rounded-full bg-[#E5E7EB] flex items-center justify-center text-gray-400 font-bold text-lg">
+                                    ح
+                                </div>
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <div class="flex justify-between items-center mb-1">
+                                    <h3 class="font-bold text-[var(--color-primary)] truncate text-sm">حنان</h3>
+                                    <span class="text-[10px] text-gray-400 whitespace-nowrap">منذ يومين تقريباً</span>
+                                </div>
+                                <p class="text-[10px] text-gray-400 truncate leading-relaxed">اضغط لبدء المحادثة ...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Main Content Area (Empty State - Left side in RTL) -->
+                <div class="flex-1 flex flex-col items-center justify-center p-8 bg-gray-50">
+                    <div class="w-24 h-24 bg-[var(--color-ninth)]/10 rounded-full flex items-center justify-center mb-6">
+                        <svg width="40" height="40" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M0.394918 28.0683C0.21784 27.891 0.0936086 27.6679 0.0361359 27.424C-0.0213367 27.1802 -0.00978051 26.9251 0.0695101 26.6874L8.65799 0.921978C8.73877 0.68035 8.88629 0.466525 9.0835 0.305227C9.28072 0.143929 9.51956 0.041752 9.77241 0.010508C10.0253 -0.020736 10.2818 0.0202294 10.5123 0.12867C10.7429 0.23711 10.938 0.408593 11.0752 0.623288L17.5948 10.8684L27.8389 17.387C28.0539 17.5241 28.2257 17.7192 28.3344 17.9498C28.4431 18.1804 28.4843 18.437 28.4531 18.6901C28.4219 18.9431 28.3198 19.1821 28.1584 19.3795C27.997 19.5768 27.783 19.7244 27.5412 19.8052L1.77576 28.3937C1.53807 28.473 1.28301 28.4845 1.03913 28.427C0.79525 28.3696 0.572185 28.2453 0.394918 28.0683ZM14.898 11.6566L10.3213 4.4652L4.43723 22.1174L14.898 11.6566ZM6.34578 24.0259L23.998 18.1419L16.8066 13.5652L6.34578 24.0259Z"
+                                fill="#51A4DA" />
+                        </svg>
+                    </div>
+                    <h2 class="text-3xl font-bold text-tenth mb-3">تواصل مع مدربك</h2>
+                    <p class="text-center max-w-xs leading-relaxed text-sm">
+                        اطرح أسئلتك وشارك أفكارك مع زملائك المتدربين
+                    </p>
+                </div>
+            </div>
+        </div>
+    </trainee-layout>
 </body>
+
 </html>

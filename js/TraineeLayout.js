@@ -79,9 +79,14 @@ class TraineeLayout extends HTMLElement {
                     
                     // Specific logic for SVGs inside the active link to maintain white strokes/fills
                     const svgPaths = link.querySelectorAll('path');
+                    const imgs = link.querySelectorAll('img');
                     svgPaths.forEach(path => {
                         if (path.getAttribute('stroke') && path.getAttribute('stroke') !== 'none') path.setAttribute('stroke', 'white');
                         if (path.getAttribute('fill') && path.getAttribute('fill') !== 'none') path.setAttribute('fill', 'white');
+                    });
+                    imgs.forEach(img => {
+                        img.classList.add('invert');
+                        img.classList.add('brightness-0');
                     });
                 };
 

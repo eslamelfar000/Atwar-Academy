@@ -1,14 +1,245 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Training Plan</title>
+    <title>الخطة التدريبية</title>
     <link rel="stylesheet" href="../../css/main.css">
     <link rel="stylesheet" href="../../icons/fontawesome-free-7.2.0-web/fontawesome-free-7.2.0-web/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="../../js/TraineeLayout.js"></script>
 </head>
+
 <body>
-    
+    <trainee-layout active-tab="trainingPlan">
+        <div class="training-plan p-4 sm:p-6 md:p-8 space-y-6">
+            <!-- head -->
+            <div
+                class="head relative mb-4 sm:mb-8 p-4 px-4 md:px-10 bg-[var(--color-fifth)] flex items-center justify-between">
+                <div class="space-y-1">
+                    <h1 class="text-xl md:text-2xl font-bold text-white">
+                        درجاتك</h1>
+                    <p class="text-white text-sm md:text-md">تابع درجاتك في الاختبارات والواجبات التدريبية</p>
+                </div>
+                <!-- Mobile Menu Button -->
+                <button id="menuToggle"
+                    class="lg:hidden text-white cursor-pointer p-1 pt-2 bg-[var(--color-primary)]/10 hover:bg-[var(--color-primary)]/20 rounded-lg transition-all duration-300">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+
+
+            <!-- content -->
+            <div class="content space-y-6">
+                <!-- Accordion Item 1 (Open by Default) -->
+                <div class="accordion-item bg-transparent overflow-hidden">
+                    <div class="accordion-header flex items-center justify-between rounded-sm p-4 px-6 sm:p-5 sm:px-8 bg-[#E1F5FE] cursor-pointer hover:bg-[var(--color-fifth)]/40 transition-colors duration-300">
+                        <h3 class="text-lg md:text-xl font-bold text-right">درجات دبلوم الأمن السيبراني</h3>
+                        <i class="fas fa-chevron-down text-[var(--color-tenth)] transition-transform duration-300 rotate-180"></i>
+                    </div>
+                    <div class="accordion-content transition-all duration-300 overflow-hidden max-h-[1000px]">
+                        <div class="px-4 sm:px-6 overflow-x-auto">
+                            <table class="w-full text-center text-xs sm:text-sm md:text-base">
+                                <thead class="bg-white/50">
+                                    <tr class="border-b border-gray-400">
+                                        <th class="p-3 md:p-4 border-x border-gray-400 font-bold text-right">اسم المادة</th>
+                                        <th class="p-3 md:p-4 border-x border-gray-400 font-bold">نوع التقييم</th>
+                                        <th class="p-3 md:p-4 border-x border-gray-400 font-bold">الدرجة</th>
+                                        <th class="p-3 md:p-4 border-x border-gray-400 font-bold">الدرجة من</th>
+                                        <th class="p-3 md:p-4 border-x border-gray-400 font-bold">التقدير</th>
+                                        <th class="p-3 md:p-4 border-x border-gray-400 font-bold">الحالة</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="text-gray-600 font-medium">
+                                    <tr class="border-b border-gray-400 hover:bg-gray-50 transition-colors">
+                                        <td class="p-3 border-x border-gray-400 text-right text-gray-400 font-bold">التوجيه المهني والتميز</td>
+                                        <td class="p-3 border-x border-gray-400 text-gray-400">اختبار قصير</td>
+                                        <td class="p-3 border-x border-gray-400 text-black font-bold">15</td>
+                                        <td class="p-3 border-x border-gray-400 text-black font-bold">15</td>
+                                        <td class="p-3 border-x border-gray-400 text-green-500 font-bold">ممتاز</td>
+                                        <td class="p-3 border-x border-gray-400 text-blue-600 font-bold">ناجح</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-400 hover:bg-gray-50 transition-colors">
+                                        <td class="p-3 border-x border-gray-400 text-right text-gray-400 font-bold">مقدمة تطبيقات الحاسب</td>
+                                        <td class="p-3 border-x border-gray-400 text-gray-400">اختبار</td>
+                                        <td class="p-3 border-x border-gray-400 text-black font-bold">25</td>
+                                        <td class="p-3 border-x border-gray-400 text-black font-bold">25</td>
+                                        <td class="p-3 border-x border-gray-400 text-green-500 font-bold">ممتاز</td>
+                                        <td class="p-3 border-x border-gray-400 text-blue-600 font-bold">ناجح</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-400 hover:bg-gray-50 transition-colors">
+                                        <td class="p-3 border-x border-gray-400 text-right text-gray-400 font-bold">أساسيات برمجة الحاسب</td>
+                                        <td class="p-3 border-x border-gray-400 text-gray-400">اختباري نهائي</td>
+                                        <td class="p-3 border-x border-gray-400 text-black font-bold">100</td>
+                                        <td class="p-3 border-x border-gray-400 text-black font-bold">100</td>
+                                        <td class="p-3 border-x border-gray-400 text-green-500 font-bold">ممتاز</td>
+                                        <td class="p-3 border-x border-gray-400 text-blue-600 font-bold">ناجح</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-400 hover:bg-gray-50 transition-colors">
+                                        <td class="p-3 border-x border-gray-400 text-right text-gray-400 font-bold">مكونات أنظمة تقنية المعلومات</td>
+                                        <td class="p-3 border-x border-gray-400 text-gray-400">اختباري نهائي</td>
+                                        <td class="p-3 border-x border-gray-400 text-black font-bold">25</td>
+                                        <td class="p-3 border-x border-gray-400 text-black font-bold">100</td>
+                                        <td class="p-3 border-x border-gray-400 text-red-500 font-bold">مقبول</td>
+                                        <td class="p-3 border-x border-gray-400 text-red-500 font-bold">راسب</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-400 hover:bg-gray-50 transition-colors">
+                                        <td class="p-3 border-x border-gray-400 text-right text-gray-400 font-bold">السلوك الوظيفي ومهارات الاتصال</td>
+                                        <td class="p-3 border-x border-gray-400 text-gray-400">اختبار</td>
+                                        <td class="p-3 border-x border-gray-400 text-black font-bold">55</td>
+                                        <td class="p-3 border-x border-gray-400 text-black font-bold">100</td>
+                                        <td class="p-3 border-x border-gray-400 text-red-500 font-bold">مقبول</td>
+                                        <td class="p-3 border-x border-gray-400 text-red-500 font-bold">راسب</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-400 hover:bg-gray-50 transition-colors">
+                                        <td class="p-3 border-x border-gray-400 text-right text-gray-400 font-bold">السياسات والتشريعات والخلقيات والالتزام بها</td>
+                                        <td class="p-3 border-x border-gray-400 text-gray-400">اختبار قصير</td>
+                                        <td class="p-3 border-x border-gray-400 text-black font-bold">26</td>
+                                        <td class="p-3 border-x border-gray-400 text-black font-bold">50</td>
+                                        <td class="p-3 border-x border-gray-400 text-red-500 font-bold">مقبول</td>
+                                        <td class="p-3 border-x border-gray-400 text-red-500 font-bold">راسب</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-400 hover:bg-gray-50 transition-colors">
+                                        <td class="p-3 border-x border-gray-400 text-right text-gray-400 font-bold">أساسيات الأمن السيبراني</td>
+                                        <td class="p-3 border-x border-gray-400 text-gray-400">اختبار</td>
+                                        <td class="p-3 border-x border-gray-400 text-black font-bold">30</td>
+                                        <td class="p-3 border-x border-gray-400 text-black font-bold">60</td>
+                                        <td class="p-3 border-x border-gray-400 text-red-500 font-bold">مقبول</td>
+                                        <td class="p-3 border-x border-gray-400 text-red-500 font-bold">راسب</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-400 hover:bg-gray-50 transition-colors">
+                                        <td class="p-3 border-x border-gray-400 text-right text-gray-400 font-bold">مفاهيم نظم التشغيل</td>
+                                        <td class="p-3 border-x border-gray-400 text-gray-400">اختباري نهائي</td>
+                                        <td class="p-3 border-x border-gray-400 text-black font-bold">95</td>
+                                        <td class="p-3 border-x border-gray-400 text-black font-bold">100</td>
+                                        <td class="p-3 border-x border-gray-400 text-green-500 font-bold">ممتاز</td>
+                                        <td class="p-3 border-x border-gray-400 text-blue-600 font-bold">ناجح</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-400 hover:bg-gray-50 transition-colors">
+                                        <td class="p-3 border-x border-gray-400 text-right text-gray-400 font-bold">لغة انجليزية (1)</td>
+                                        <td class="p-3 border-x border-gray-400 text-gray-400">اختباري نهائي</td>
+                                        <td class="p-3 border-x border-gray-400 text-black font-bold">18</td>
+                                        <td class="p-3 border-x border-gray-400 text-black font-bold">30</td>
+                                        <td class="p-3 border-x border-gray-400 text-green-500 font-bold">جيد</td>
+                                        <td class="p-3 border-x border-gray-400 text-blue-600 font-bold">ناجح</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <!-- Multiple Collapsed Accordion Items -->
+                <div class="accordion-item bg-transparent overflow-hidden">
+                    <div
+                        class="accordion-header flex items-center justify-between rounded-sm p-4 px-6 sm:p-5 sm:px-8 bg-[#E1F5FE] cursor-pointer hover:bg-[var(--color-fifth)]/40 transition-colors duration-300">
+                        <h3 class="text-lg md:text-xl font-bold text-[var(--color-tenth)] text-right">دبلوم ادارة المستشفيات والخدمات الصحية</h3>
+                        <i class="fas fa-chevron-down text-[var(--color-tenth)] transition-transform duration-300"></i>
+                    </div>
+                    <div class="accordion-content transition-all duration-300 overflow-hidden max-h-0">
+                        <div class="px-4 sm:px-6 overflow-x-auto">
+                            <div class="p-6 text-center text-gray-500 bg-white">
+                                لا توجد درجات مسجلة حالياً لهذا الدبلوم.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item bg-transparent overflow-hidden">
+                    <div
+                        class="accordion-header flex items-center justify-between rounded-sm p-4 px-6 sm:p-5 sm:px-8 bg-[#E1F5FE] cursor-pointer hover:bg-[var(--color-fifth)]/40 transition-colors duration-300">
+                        <h3 class="text-lg md:text-xl font-bold text-[var(--color-tenth)] text-right">دبلوم إدارة التمريض</h3>
+                        <i class="fas fa-chevron-down text-[var(--color-tenth)] transition-transform duration-300"></i>
+                    </div>
+                    <div class="accordion-content transition-all duration-300 overflow-hidden max-h-0">
+                        <div class="px-4 sm:px-6 overflow-x-auto">
+                            <div class="p-6 text-center text-gray-500 bg-white">
+                                لا توجد درجات مسجلة حالياً لهذا الدبلوم.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item bg-transparent overflow-hidden">
+                    <div
+                        class="accordion-header flex items-center justify-between rounded-sm p-4 px-6 sm:p-5 sm:px-8 bg-[#E1F5FE] cursor-pointer hover:bg-[var(--color-fifth)]/40 transition-colors duration-300">
+                        <h3 class="text-lg md:text-xl font-bold text-[var(--color-tenth)] text-right">دبلوم ادارة الموارد البشرية</h3>
+                        <i class="fas fa-chevron-down text-[var(--color-tenth)] transition-transform duration-300"></i>
+                    </div>
+                    <div class="accordion-content transition-all duration-300 overflow-hidden max-h-0">
+                        <div class="px-4 sm:px-6 overflow-x-auto">
+                            <div class="p-6 text-center text-gray-500 bg-white">
+                                لا توجد درجات مسجلة حالياً لهذا الدبلوم.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item bg-transparent overflow-hidden">
+                    <div
+                        class="accordion-header flex items-center justify-between rounded-sm p-4 px-6 sm:p-5 sm:px-8 bg-[#E1F5FE] cursor-pointer hover:bg-[var(--color-fifth)]/40 transition-colors duration-300">
+                        <h3 class="text-lg md:text-xl font-bold text-[var(--color-tenth)] text-right">دبلوم السلامة والصحة المهنية</h3>
+                        <i class="fas fa-chevron-down text-[var(--color-tenth)] transition-transform duration-300"></i>
+                    </div>
+                    <div class="accordion-content transition-all duration-300 overflow-hidden max-h-0">
+                        <div class="px-4 sm:px-6 overflow-x-auto">
+                            <div class="p-6 text-center text-gray-500 bg-white">
+                                لا توجد درجات مسجلة حالياً لهذا الدبلوم.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', () => {
+                    setTimeout(() => {
+                        const headers = document.querySelectorAll('.accordion-header');
+                        
+                        // Initialize first item border if it's open by default
+                        const firstItemHeader = headers[0];
+                        if (firstItemHeader && !firstItemHeader.nextElementSibling.classList.contains('max-h-0')) {
+                            firstItemHeader.classList.add('border', 'border-gray-400');
+                        }
+
+                        headers.forEach((header) => {
+                            header.addEventListener('click', () => {
+                                const content = header.nextElementSibling;
+                                const icon = header.querySelector('i');
+
+                                const isOpen = !content.classList.contains('max-h-0');
+
+                                if (isOpen) {
+                                    // Close it
+                                    content.classList.remove('max-h-[1000px]');
+                                    content.classList.add('max-h-0');
+                                    if (icon) icon.classList.remove('rotate-180');
+                                    header.classList.remove('border', 'border-gray-400');
+                                } else {
+                                    // Open it and close others
+                                    headers.forEach(h => {
+                                        h.classList.remove('border', 'border-gray-400');
+                                        const c = h.nextElementSibling;
+                                        c.classList.remove('max-h-[1000px]');
+                                        c.classList.add('max-h-0');
+                                        const otherIcon = h.querySelector('i');
+                                        if (otherIcon) otherIcon.classList.remove('rotate-180');
+                                    });
+
+                                    // Open current
+                                    content.classList.remove('max-h-0');
+                                    content.classList.add('max-h-[1000px]');
+                                    if (icon) icon.classList.add('rotate-180');
+                                    header.classList.add('border', 'border-gray-400');
+                                }
+                            });
+                        });
+
+                        
+                    }, 100);
+                });
+            </script>
+        </div>
+    </trainee-layout>
 </body>
 </html>
